@@ -16,6 +16,7 @@ public class UIControl : MonoBehaviour
     public GameObject[] smCampus;
     //Side Menu
     public GameObject[] sideMenus;
+    public Button[] mainBuilding;
     public GameObject[] buildingFloors;
     //hider
     public GameObject hider;
@@ -108,6 +109,10 @@ public class UIControl : MonoBehaviour
             }
             buildingFloors[building].SetActive(true);
         }
-        
+    }
+    public void RemainSelected(int building){
+        ColorBlock colors = mainBuilding[building].colors;
+        colors.normalColor = new Color32(8,105,60,255);
+        mainBuilding[building].colors = colors;
     }
 }
