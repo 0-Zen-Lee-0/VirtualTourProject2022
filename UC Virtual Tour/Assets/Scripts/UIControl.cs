@@ -16,6 +16,7 @@ public class UIControl : MonoBehaviour
     public GameObject[] smCampus;
     //Side Menu
     public GameObject[] sideMenus;
+    public GameObject[] buildingFloors;
     //hider
     public GameObject hider;
     public int cNo = 0;
@@ -98,5 +99,15 @@ public class UIControl : MonoBehaviour
         }
         //hide hider
         hider.SetActive(false);
+    }
+    public void ShowFloorButtons(int building){
+        if(buildingFloors[building].activeSelf == false){
+            for(int i =0; i < buildingFloors.Length; i++)
+            {
+                buildingFloors[i].SetActive(false);
+            }
+            buildingFloors[building].SetActive(true);
+        }
+        
     }
 }
