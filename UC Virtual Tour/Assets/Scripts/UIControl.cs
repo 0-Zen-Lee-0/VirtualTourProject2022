@@ -35,8 +35,8 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowCampusMenu(){
+        HideUI();
         if(campusMenu.activeSelf == false){
-            HideUI();
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
@@ -44,9 +44,24 @@ public class UIControl : MonoBehaviour
             hider.SetActive(true);
         }
         else{
-            HideUI();
             btnCmenu.image.sprite = upDown[0];
         }
+    }
+
+    public void HideUI(){
+        if(sideMenus[cNo].activeSelf == true){
+            //hide side menu
+            sideMenus[cNo].SetActive(false);
+            //show smBtn
+            smCampus[cNo].SetActive(true);
+        }
+        if(campusMenu.activeSelf == true){
+            campusMenu.SetActive(false);
+            btnCmenu.image.sprite = upDown[0];
+        }
+        //hide hider
+        hider.SetActive(false);
+
     }
 
     public void ChooseCampus(int campusNumber){
@@ -67,28 +82,13 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowSideMenu(int campusNumber){
+        HideUI();
         //show side menu
         sideMenus[campusNumber].SetActive(true);
         //show hider
         hider.SetActive(true);
         //hide smBtn
         smCampus[campusNumber].SetActive(false);
-    }
-
-    public void HideUI(){
-        if(sideMenus[cNo].activeSelf == true){
-            //hide side menu
-            sideMenus[cNo].SetActive(false);
-            //show smBtn
-            smCampus[cNo].SetActive(true);
-        }
-        if(campusMenu.activeSelf == true){
-            campusMenu.SetActive(false);
-            btnCmenu.image.sprite = upDown[0];
-        }
-        //hide hider
-        hider.SetActive(false);
-
     }
 
     public void BackToHome(){
@@ -101,18 +101,24 @@ public class UIControl : MonoBehaviour
         //hide hider
         hider.SetActive(false);
     }
+
     public void ShowFloorButtons(int building){
         if(buildingFloors[building].activeSelf == false){
             for(int i =0; i < buildingFloors.Length; i++)
             {
                 buildingFloors[i].SetActive(false);
+                ColorBlock colors = mainBuilding[i].colors;
+                colors.normalColor = new Color32(255,255,255,255);
+                mainBuilding[i].colors = colors;
             }
             buildingFloors[building].SetActive(true);
+            hider.SetActive(true);
         }
     }
-    public void RemainSelected(int building){
+    public void RemainSelectedColor(int building){
         ColorBlock colors = mainBuilding[building].colors;
         colors.normalColor = new Color32(8,105,60,255);
         mainBuilding[building].colors = colors;
+        hider.SetActive(true);
     }
 }
