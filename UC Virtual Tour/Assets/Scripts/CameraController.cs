@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,15 +7,17 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] float rotateSpeed = 300.0f;
     [SerializeField] float zoomSpeed = 600.0f;
+    [SerializeField] float scrollZoomSpeed;
     [SerializeField] float minFieldOfView = 40.0f;
     [SerializeField] float maxFieldOfView = 110.0f;
     // TODO: Deprecate
     [SerializeField] float defaulFieldOfView = 90.0f;
     float fieldOfView;
+    float maxVerticalAngle = 90f;
 
     bool isDragging;
-    Quaternion targetRotation = Quaternion.identity;
 
+    [SerializeField] float initialPanDelay;
     [SerializeField] float initialPanSpeed;
     [SerializeField] float initialPanMaxSpeed;
     [SerializeField] float initialPanAcceleration;
@@ -22,11 +25,12 @@ public class CameraController : MonoBehaviour
     int initialRotationDir;
 
     bool isCurrentSphereInteracted; 
+    bool initialPanStarted;
 
     void Awake()
     {
         // TODO: Refactor this, design conflicts existing
-        TourManager.onLocationSphereChanged += ResetInteractedFlag;
+        TourManager.onLocationSphereChanged += ResetFlags;
 
         ResetCamera();
     }
@@ -34,26 +38,64 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         HandleMouseInput();
-        if (!isCurrentSphereInteracted)
+        if (!isCurrentSphereInteracted && !initialPanStarted)
         {
-            InitialPan();
+            StartCoroutine(StartInitialPan());
         }
     }
 
-    void InitialPan()
+    // TODO: find a more elegant solution, current implementation is too expensive
+    float ClampVerticalAngle(float angle)
     {
-        if (initialPanSpeed < initialPanMaxSpeed)
+        float upperLimit = 360f - maxVerticalAngle;
+        if (angle > 180 && angle < upperLimit)
         {
-            initialPanSpeed += initialPanAcceleration * Time.deltaTime;
+            return upperLimit;
         }
-
-        transform.Rotate(Vector3.up, initialPanSpeed * Time.deltaTime * initialRotationDir, Space.World);
+        else if (angle < 180 && angle > maxVerticalAngle)
+        {
+            return maxVerticalAngle;
+        }
+        else
+        {
+            return angle;
+        }
     }
 
-    void ResetInteractedFlag(GameObject currentLocationSphere)
+    IEnumerator StartInitialPan()
+    {
+        initialPanStarted = true;
+        Debug.Log("started");
+        yield return new WaitForSeconds(initialPanDelay);
+        StartCoroutine(InitialPan());
+    }
+
+    // TODO: refactor, inefficient
+    IEnumerator InitialPan()
+    {
+        while(true)
+        {
+            if (isCurrentSphereInteracted)
+            {
+                yield break;
+            }
+
+            if (initialPanSpeed < initialPanMaxSpeed)
+            {
+                initialPanSpeed += initialPanAcceleration * Time.deltaTime;
+            }
+
+            transform.Rotate(Vector3.up, initialPanSpeed * Time.deltaTime * initialRotationDir, Space.World);
+
+            yield return null;
+        }
+    }
+
+    void ResetFlags(GameObject currentLocationSphere)
     {
         initialPanSpeed = initialPanCurrentSpeed;
         isCurrentSphereInteracted = false;
+        initialPanStarted = false;
         initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
     }
 
@@ -64,14 +106,18 @@ public class CameraController : MonoBehaviour
             isCurrentSphereInteracted = true;
             isDragging = true;
         }
-
-        if (Input.GetMouseButton(0) && isDragging)
+        else if (Input.GetMouseButton(0) && isDragging)
         {
             // rotate camera based on mouse actions
             // TODO: refactor
-            transform.eulerAngles =  new Vector3(transform.eulerAngles.x + Input.GetAxis("Mouse Y") * Time.deltaTime * rotateSpeed, transform.eulerAngles.y + Input.GetAxis("Mouse X") * Time.deltaTime * -rotateSpeed, 0);
+            transform.localEulerAngles =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + Input.GetAxis("Mouse Y") * Time.deltaTime * rotateSpeed), transform.localEulerAngles.y + Input.GetAxis("Mouse X") * Time.deltaTime * -rotateSpeed, 0);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isDragging = false;
         }
 
+        float scrollInput = Input.mouseScrollDelta.y;
         if ((Input.GetMouseButton(1) || Input.GetMouseButton(2)) && !IsPointerOverUIObject())
         {
             isCurrentSphereInteracted = true;
@@ -80,10 +126,11 @@ public class CameraController : MonoBehaviour
             fieldOfView = Mathf.Clamp(fieldOfView + Input.GetAxis("Mouse Y") * Time.deltaTime * zoomSpeed, minFieldOfView, maxFieldOfView);
             UpdateCameraFOV();
         }
-
-        if (Input.GetMouseButtonUp(0))
+        else if (scrollInput != 0)
         {
-            isDragging = false;
+            isCurrentSphereInteracted = true;
+            fieldOfView = Mathf.Clamp(fieldOfView + scrollInput * Time.deltaTime * scrollZoomSpeed, minFieldOfView, maxFieldOfView);
+            UpdateCameraFOV();
         }
     }
 

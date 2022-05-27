@@ -11915,9 +11915,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 600
   zoomSpeed: 200
+  scrollZoomSpeed: 0
   minFieldOfView: 40
   maxFieldOfView: 110
   defaulFieldOfView: 90
+  initialPanDelay: 0
   initialPanSpeed: 0.5
   initialPanMaxSpeed: 7
   initialPanAcceleration: 0.7
