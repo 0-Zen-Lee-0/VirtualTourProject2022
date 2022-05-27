@@ -17,10 +17,12 @@ public class UIControl : MonoBehaviour
     //Side Menu
     public GameObject[] sideMenus;
     public Button[] mainBuilding;
-    public GameObject[] buildingFloors;
+    public GameObject[] buildingFloorGroup;
+    public GameObject[] buildingFloor;
     //hider
     public GameObject hider;
     public int cNo = 0;
+    bool inMain;
 
     // Start is called before the first frame update
     void Start()
@@ -103,15 +105,15 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowFloorButtons(int building){
-        if(buildingFloors[building].activeSelf == false){
-            for(int i =0; i < buildingFloors.Length; i++)
+        if(buildingFloorGroup[building].activeSelf == false){
+            for(int i =0; i < buildingFloorGroup.Length; i++)
             {
-                buildingFloors[i].SetActive(false);
+                buildingFloorGroup[i].SetActive(false);
                 ColorBlock colors = mainBuilding[i].colors;
                 colors.normalColor = new Color32(255,255,255,255);
                 mainBuilding[i].colors = colors;
             }
-            buildingFloors[building].SetActive(true);
+            buildingFloorGroup[building].SetActive(true);
             hider.SetActive(true);
         }
     }
