@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour
 {
-    //Start Page
+    
     public GameObject startPage;
-    //Campus Button Menu
     public GameObject campusMenu;
     //up-down button
     public Button btnCmenu;
@@ -16,11 +15,13 @@ public class UIControl : MonoBehaviour
     public GameObject[] smCampus;
     //Side Menu
     public GameObject[] sideMenus;
+    
     public Button[] mainBuilding;
     public GameObject[] buildingFloorGroup;
     public GameObject[] buildingFloor;
     //hider
     public GameObject hider;
+    
     public int cNo = 0;
     bool inMain;
 
@@ -37,8 +38,8 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowCampusMenu(){
-        HideUI();
-        if(campusMenu.activeSelf == false){
+        if(btnCmenu.image.sprite == upDown[0]){
+            HideUI();
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
@@ -46,7 +47,7 @@ public class UIControl : MonoBehaviour
             hider.SetActive(true);
         }
         else{
-            btnCmenu.image.sprite = upDown[0];
+            HideUI();
         }
     }
 
@@ -64,6 +65,16 @@ public class UIControl : MonoBehaviour
         //hide hider
         hider.SetActive(false);
 
+    }
+    public void BackToHome(){
+        //show start page
+        startPage.SetActive(true);
+        foreach (GameObject sideMenu in sideMenus)
+        {
+            sideMenu.SetActive(false);
+        }
+        //hide hider
+        hider.SetActive(false);
     }
 
     public void ChooseCampus(int campusNumber){
@@ -91,17 +102,6 @@ public class UIControl : MonoBehaviour
         hider.SetActive(true);
         //hide smBtn
         smCampus[campusNumber].SetActive(false);
-    }
-
-    public void BackToHome(){
-        //show start page
-        startPage.SetActive(true);
-        foreach (GameObject sideMenu in sideMenus)
-        {
-            sideMenu.SetActive(false);
-        }
-        //hide hider
-        hider.SetActive(false);
     }
 
     public void ShowFloorButtons(int building){
