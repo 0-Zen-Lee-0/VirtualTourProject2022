@@ -19,6 +19,8 @@ public class UIControl : MonoBehaviour
     public Button[] mainBuilding;
     public GameObject[] buildingFloorGroup;
     public GameObject[] buildingFloor;
+    public GameObject[] specialSite;
+
     //hider
     public GameObject hider;
     
@@ -55,6 +57,11 @@ public class UIControl : MonoBehaviour
         if(sideMenus[cNo].activeSelf == true){
             //hide side menu
             sideMenus[cNo].SetActive(false);
+            foreach(GameObject specialSite in specialSite)
+            {
+                specialSite.SetActive(false);
+            }
+            ReturnToWhite();
             //show smBtn
             smCampus[cNo].SetActive(true);
         }
@@ -106,13 +113,7 @@ public class UIControl : MonoBehaviour
 
     public void ShowFloorButtons(int building){
         if(buildingFloorGroup[building].activeSelf == false){
-            for(int i =0; i < buildingFloorGroup.Length; i++)
-            {
-                buildingFloorGroup[i].SetActive(false);
-                ColorBlock colors = mainBuilding[i].colors;
-                colors.normalColor = new Color32(255,255,255,255);
-                mainBuilding[i].colors = colors;
-            }
+            ReturnToWhite();
             buildingFloorGroup[building].SetActive(true);
             hider.SetActive(true);
         }
@@ -122,5 +123,22 @@ public class UIControl : MonoBehaviour
         colors.normalColor = new Color32(8,105,60,255);
         mainBuilding[building].colors = colors;
         hider.SetActive(true);
+    }
+    public void ReturnToWhite(){
+        for(int i =0; i < buildingFloorGroup.Length; i++)
+            {
+                buildingFloorGroup[i].SetActive(false);
+                ColorBlock colors = mainBuilding[i].colors;
+                colors.normalColor = new Color32(255,255,255,255);
+                mainBuilding[i].colors = colors;
+            }
+    }
+    public void ShowSpecial(int floor){
+        foreach(GameObject specialSite in specialSite)
+        {
+            specialSite.SetActive(false);
+        }
+        specialSite[floor].SetActive(true); 
+        
     }
 }
