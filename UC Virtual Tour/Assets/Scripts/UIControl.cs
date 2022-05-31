@@ -16,7 +16,7 @@ public class UIControl : MonoBehaviour
     //Side Menu
     public GameObject[] sideMenus;
     
-    public Button[] mainBuilding;
+    public Button[] leftPanelButton;
     public GameObject[] buildingFloorGroup;
     public GameObject[] buildingFloor;
     public GameObject[] specialSite;
@@ -62,6 +62,7 @@ public class UIControl : MonoBehaviour
                 specialSite.SetActive(false);
             }
             ReturnToWhite();
+            HideBuildingFloorGroups();
             //show smBtn
             smCampus[cNo].SetActive(true);
         }
@@ -112,33 +113,66 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowFloorButtons(int building){
-        if(buildingFloorGroup[building].activeSelf == false){
-            ReturnToWhite();
+        if(buildingFloorGroup[building].activeSelf == false)
+        {
+            HideBuildingFloorGroups();
             buildingFloorGroup[building].SetActive(true);
             hider.SetActive(true);
         }
+        HideSpecial();
+        RemainSelectedColor(building);
     }
     public void RemainSelectedColor(int building){
-        ColorBlock colors = mainBuilding[building].colors;
+        if(building<16)
+        {
+            ReturnToWhite();
+        }
+        switch (building) 
+        {
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+            ReturnToWhite(15,20);
+            break;
+        }
+        ColorBlock colors = leftPanelButton[building].colors;
         colors.normalColor = new Color32(8,105,60,255);
-        mainBuilding[building].colors = colors;
+        leftPanelButton[building].colors = colors;
         hider.SetActive(true);
     }
     public void ReturnToWhite(){
-        for(int i =0; i < buildingFloorGroup.Length; i++)
-            {
-                buildingFloorGroup[i].SetActive(false);
-                ColorBlock colors = mainBuilding[i].colors;
-                colors.normalColor = new Color32(255,255,255,255);
-                mainBuilding[i].colors = colors;
-            }
+        foreach(Button leftPanelButton in leftPanelButton)
+        {
+            ColorBlock colors = leftPanelButton.colors;
+            colors.normalColor = new Color32(255,255,255,255);
+            leftPanelButton.colors = colors;
+        }
+    }
+    public void ReturnToWhite(int limitLow, int limitHi){
+        for(int i= limitLow; i<=limitHi; i++)
+        {
+            ColorBlock colors = leftPanelButton[i].colors;
+            colors.normalColor = new Color32(255,255,255,255);
+            leftPanelButton[i].colors = colors;
+        }
     }
     public void ShowSpecial(int floor){
+        HideSpecial();
+        specialSite[floor].SetActive(true); 
+    }
+    public void HideSpecial(){
         foreach(GameObject specialSite in specialSite)
         {
             specialSite.SetActive(false);
         }
-        specialSite[floor].SetActive(true); 
-        
+    }
+    public void HideBuildingFloorGroups(){
+        foreach(GameObject buildingFloorGroup in buildingFloorGroup)
+        {
+            buildingFloorGroup.SetActive(false);
+        }
     }
 }
