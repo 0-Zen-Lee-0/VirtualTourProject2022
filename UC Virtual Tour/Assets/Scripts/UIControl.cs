@@ -27,18 +27,6 @@ public class UIControl : MonoBehaviour
     public int cNo = 0;
     bool inMain;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ShowCampusMenu(){
         if(btnCmenu.image.sprite == upDown[0]){
             HideUI();
