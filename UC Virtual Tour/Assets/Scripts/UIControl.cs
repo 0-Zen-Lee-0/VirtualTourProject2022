@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour
 {
+    public static UIControl Instance {get; private set;}
     
     public GameObject startPage;
     public GameObject campusMenu;
@@ -18,6 +19,7 @@ public class UIControl : MonoBehaviour
     
     public Button[] leftPanelButton;
     public GameObject[] buildingFloorGroup;
+    public GameObject[] buildingFloor;
     public GameObject[] specialSite;
 
     //hider
@@ -26,34 +28,38 @@ public class UIControl : MonoBehaviour
     public int cNo = 0;
     bool inMain;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-    
-    }
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instance = this;
     }
 
     public void ShowCampusMenu(){
-        if(btnCmenu.image.sprite == upDown[0]){
+
+        if (campusMenu.activeSelf)
+        {
+            Debug.Log("1");
+            btnCmenu.image.sprite = upDown[1];
             HideUI();
+        }
+        else
+        {
+            Debug.Log("2");
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
-            btnCmenu.image.sprite = upDown[1];
             hider.SetActive(true);
-        }
-        else{
-            HideUI();
+            btnCmenu.image.sprite = upDown[1];
         }
     }
 
     public void HideUI(){
-        if(sideMenus[cNo].activeSelf == true){
+        if(sideMenus[cNo].activeSelf){
             //hide side menu
             sideMenus[cNo].SetActive(false);
             foreach(GameObject specialSite in specialSite)
@@ -65,7 +71,7 @@ public class UIControl : MonoBehaviour
             //show smBtn
             smCampus[cNo].SetActive(true);
         }
-        if(campusMenu.activeSelf == true){
+        if(campusMenu.activeSelf){
             campusMenu.SetActive(false);
             btnCmenu.image.sprite = upDown[0];
         }
@@ -128,14 +134,14 @@ public class UIControl : MonoBehaviour
         }
         switch (building) 
         {
-        case 15:
-        case 16:
-        case 17:
-        case 18:
-        case 19:
-        case 20:
-            ReturnToWhite(15,20);
-            break;
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+                ReturnToWhite(15,20);
+                break;
         }
         ColorBlock colors = leftPanelButton[building].colors;
         colors.normalColor = new Color32(8,105,60,255);

@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject rightButtonsPanel;
     [SerializeField] GameObject slideshowPanel;
     [SerializeField] GameObject descriptionPanel;
+    [SerializeField] GameObject videoPanel;
 
     [SerializeField] Button audioButton;
     [SerializeField] Sprite nonMuteSprite;
@@ -55,6 +56,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowSlideshowPanel()
     {
+        descriptionPanel.SetActive(false);
         slideshowPanel.SetActive(true);
     }
 
@@ -75,6 +77,21 @@ public class UIManager : MonoBehaviour
     {
         bool currentState = descriptionPanel.activeSelf;
         descriptionPanel.SetActive(!currentState);
+    }
+
+    public void showDescriptionPanel()
+    {
+        descriptionPanel.SetActive(true);
+    }
+
+    public void showVideoPanel()
+    {
+        videoPanel.SetActive(true);
+    }
+
+    public void hideVideoPanel()
+    {
+        videoPanel.SetActive(false);
     }
 
     public void DisableDescriptionPanel()
