@@ -109,6 +109,9 @@ public class TourManager : MonoBehaviour
         // show selected location
         currentLocationSphere.SetActive(true);
 
+        // call event 
+        onLocationSphereChanged?.Invoke(currentLocationSphere);
+
         // fade in
         for (float i = duration; i > 0; i -= frameTime)
         {
@@ -120,9 +123,6 @@ public class TourManager : MonoBehaviour
             yield return new WaitForSeconds(frameTime);
         }
         transitionSphere.SetActive(false);
-
-        // call event 
-        onLocationSphereChanged?.Invoke(currentLocationSphere);
     }
 
     void LoadLocationSphereData()

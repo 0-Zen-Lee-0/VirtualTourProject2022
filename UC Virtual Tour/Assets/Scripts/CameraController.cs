@@ -29,6 +29,7 @@ public class CameraController : MonoBehaviour
     float initialPanCurrentSpeed;
     int initialRotationDir;
 
+    Coroutine initialPan;
     bool isCurrentSphereInteracted; 
     bool initialPanStarted;
 
@@ -41,10 +42,11 @@ public class CameraController : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
         HandleSphereNavigation();
         if (!isCurrentSphereInteracted && !initialPanStarted)
         {
+            Debug.Log("started");
             StartCoroutine(StartInitialPan());
         }
     }
@@ -71,7 +73,7 @@ public class CameraController : MonoBehaviour
     {
         initialPanStarted = true;
         yield return new WaitForSeconds(initialPanDelay);
-        StartCoroutine(InitialPan());
+        initialPan = StartCoroutine(InitialPan());
     }
 
     // TODO: refactor, inefficient
@@ -88,6 +90,7 @@ public class CameraController : MonoBehaviour
 
             yield return null;
         }
+        Debug.Log("done");  
     }
 
     void ResetFlags(GameObject currentLocationSphere)
@@ -96,6 +99,12 @@ public class CameraController : MonoBehaviour
         isCurrentSphereInteracted = false;
         initialPanStarted = false;
         initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
+
+        // prevent running multiple coroutines
+        if (initialPanStarted)
+        {
+            StopCoroutine(initialPan);
+        }
     }
 
     void HandleSphereNavigation()
