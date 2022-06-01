@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class VideoManager : MonoBehaviour
 {
     VideoPlayer videoPlayer;
+    int locationSphereIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,9 @@ public class VideoManager : MonoBehaviour
         if (!campusData.IsIntroductoryClipPlayed)
         {
             UIManager.Instance.showVideoPanel();
+
+            locationSphereIndex = campusData.locationSphereIndex;
+
             VideoClip introductoryClip = campusData.introductoryClip;
             campusData.IsIntroductoryClipPlayed = true;
             videoPlayer.clip = introductoryClip;
@@ -29,6 +33,7 @@ public class VideoManager : MonoBehaviour
     {
         UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
-        
+
+        TourManager.Instance.LoadSite(locationSphereIndex);
     }
 }
