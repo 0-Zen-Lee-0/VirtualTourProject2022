@@ -12,6 +12,7 @@ public class VideoManager : MonoBehaviour
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
+        videoPlayer.loopPointReached += StopVideo;
     }
 
     public void StartVideo(CampusData campusData)
@@ -27,6 +28,12 @@ public class VideoManager : MonoBehaviour
             videoPlayer.clip = introductoryClip;
             videoPlayer.Play();
         }
+    }
+
+    // TODO: current implementation is too hacky, try to find a more elegant implementation
+    void StopVideo(VideoPlayer videoPlayer)
+    {
+        StopVideo();
     }
 
     public void StopVideo()
