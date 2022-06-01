@@ -30,8 +30,10 @@ public class CameraController : MonoBehaviour
     int initialRotationDir;
 
     Coroutine initialPan;
+    // TODO: too many bools for one functionality; refactor
     bool isCurrentSphereInteracted; 
     bool initialPanStarted;
+    bool initialPanRunning;
 
     void Awake()
     {
@@ -78,6 +80,8 @@ public class CameraController : MonoBehaviour
     // TODO: refactor, inefficient
     IEnumerator InitialPan()
     {
+        initialPanRunning = true;
+
         while(!isCurrentSphereInteracted)
         {
             if (initialPanSpeed < initialPanMaxSpeed)
@@ -99,7 +103,7 @@ public class CameraController : MonoBehaviour
         initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
 
         // prevent running multiple coroutines
-        if (initialPanStarted)
+        if (initialPanRunning)
         {
             StopCoroutine(initialPan);
         }
