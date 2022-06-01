@@ -27,18 +27,6 @@ public class UIControl : MonoBehaviour
     public int cNo = 0;
     bool inMain;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ShowCampusMenu(){
         if(btnCmenu.image.sprite == upDown[0]){
             HideUI();
@@ -54,7 +42,7 @@ public class UIControl : MonoBehaviour
     }
 
     public void HideUI(){
-        if(sideMenus[cNo].activeSelf == true){
+        if(sideMenus[cNo].activeSelf){
             //hide side menu
             sideMenus[cNo].SetActive(false);
             foreach(GameObject specialSite in specialSite)
@@ -129,14 +117,14 @@ public class UIControl : MonoBehaviour
         }
         switch (building) 
         {
-        case 15:
-        case 16:
-        case 17:
-        case 18:
-        case 19:
-        case 20:
-            ReturnToWhite(15,20);
-            break;
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+                ReturnToWhite(15,20);
+                break;
         }
         ColorBlock colors = leftPanelButton[building].colors;
         colors.normalColor = new Color32(8,105,60,255);
