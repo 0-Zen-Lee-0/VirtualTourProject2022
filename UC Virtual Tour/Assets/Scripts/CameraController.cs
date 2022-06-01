@@ -46,7 +46,6 @@ public class CameraController : MonoBehaviour
         HandleSphereNavigation();
         if (!isCurrentSphereInteracted && !initialPanStarted)
         {
-            Debug.Log("started");
             StartCoroutine(StartInitialPan());
         }
     }
@@ -90,7 +89,6 @@ public class CameraController : MonoBehaviour
 
             yield return null;
         }
-        Debug.Log("done");  
     }
 
     void ResetFlags(GameObject currentLocationSphere)
