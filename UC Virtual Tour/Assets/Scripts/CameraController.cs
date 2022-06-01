@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] float rotateSpeed = 300.0f;
-    [SerializeField] float zoomSpeed = 600.0f;
+    [SerializeField] float rotateSpeed;
+    [SerializeField] float zoomSpeed;
     [SerializeField] float scrollZoomSpeed;
     [SerializeField] float minFieldOfView = 40.0f;
     [SerializeField] float maxFieldOfView = 110.0f;
@@ -16,6 +16,11 @@ public class CameraController : MonoBehaviour
     float maxVerticalAngle = 90f;
 
     bool isDragging;
+    Vector3 dragVelocity;
+    Vector3 lastMousePosition;
+    Vector3 lastPanInput;
+    Vector3 currentPanInput;
+    Vector3 panVelocity;
 
     [SerializeField] float initialPanDelay;
     [SerializeField] float initialPanSpeed;
@@ -37,7 +42,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        HandleMouseInput();
+        HandleSphereNavigation();
         if (!isCurrentSphereInteracted && !initialPanStarted)
         {
             StartCoroutine(StartInitialPan());
@@ -65,7 +70,6 @@ public class CameraController : MonoBehaviour
     IEnumerator StartInitialPan()
     {
         initialPanStarted = true;
-        Debug.Log("started");
         yield return new WaitForSeconds(initialPanDelay);
         StartCoroutine(InitialPan());
     }
@@ -73,13 +77,8 @@ public class CameraController : MonoBehaviour
     // TODO: refactor, inefficient
     IEnumerator InitialPan()
     {
-        while(true)
+        while(!isCurrentSphereInteracted)
         {
-            if (isCurrentSphereInteracted)
-            {
-                yield break;
-            }
-
             if (initialPanSpeed < initialPanMaxSpeed)
             {
                 initialPanSpeed += initialPanAcceleration * Time.deltaTime;
@@ -99,18 +98,26 @@ public class CameraController : MonoBehaviour
         initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
     }
 
-    void HandleMouseInput()
+    void HandleSphereNavigation()
     {
         if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
         {
+            lastMousePosition = Input.mousePosition;
+
             isCurrentSphereInteracted = true;
             isDragging = true;
         }
-        else if (Input.GetMouseButton(0) && isDragging)
+
+        
+        if (Input.GetMouseButton(0) && isDragging)
         {
+            dragVelocity = Input.mousePosition - lastMousePosition;
+            lastMousePosition = Input.mousePosition;    
+
+            lastPanInput = currentPanInput;
+            
             // rotate camera based on mouse actions
-            // TODO: refactor
-            transform.localEulerAngles =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + Input.GetAxis("Mouse Y") * Time.deltaTime * rotateSpeed), transform.localEulerAngles.y + Input.GetAxis("Mouse X") * Time.deltaTime * -rotateSpeed, 0);
+            currentPanInput =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + (dragVelocity.y * Time.deltaTime * rotateSpeed)), transform.localEulerAngles.y + (dragVelocity.x * Time.deltaTime * -rotateSpeed), 0);
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -132,6 +139,13 @@ public class CameraController : MonoBehaviour
             fieldOfView = Mathf.Clamp(fieldOfView + scrollInput * Time.deltaTime * scrollZoomSpeed, minFieldOfView, maxFieldOfView);
             UpdateCameraFOV();
         }
+        
+        // Update camera rotation
+        if (isCurrentSphereInteracted)
+        {
+            transform.localEulerAngles = currentPanInput;
+            // transform.localEulerAngles = new Vector3(Mathf.Lerp(lastPanInput.x, currentPanInput.x, Time.deltaTime * a), Mathf.Lerp(lastPanInput.y, currentPanInput.y, Time.deltaTime * a), Mathf.Lerp(lastPanInput.z, currentPanInput.z, Time.deltaTime * a));
+        }
     }
 
     bool IsPointerOverUIObject()
@@ -152,6 +166,9 @@ public class CameraController : MonoBehaviour
 
     public void ResetCamera(Vector3 lookRotation, float fieldOfView)
     {
+        lastPanInput = lookRotation;
+        currentPanInput = lookRotation;
+
         transform.eulerAngles = lookRotation;
         // TODO: refactor
         this.fieldOfView = fieldOfView;
