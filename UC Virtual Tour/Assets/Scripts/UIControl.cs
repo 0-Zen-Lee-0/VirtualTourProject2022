@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour
 {
+    public static UIControl Instance {get; private set;}
     
     public GameObject startPage;
     public GameObject campusMenu;
@@ -26,6 +27,17 @@ public class UIControl : MonoBehaviour
     
     public int cNo = 0;
     bool inMain;
+
+    void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     public void ShowCampusMenu(){
         if(btnCmenu.image.sprite == upDown[0]){

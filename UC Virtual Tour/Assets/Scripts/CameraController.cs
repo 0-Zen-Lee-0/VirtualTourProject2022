@@ -29,10 +29,11 @@ public class CameraController : MonoBehaviour
     float initialPanCurrentSpeed;
     int initialRotationDir;
 
+    Coroutine startInitialPan;
     Coroutine initialPan;
     // TODO: too many bools for one functionality; refactor
     bool isCurrentSphereInteracted; 
-    bool initialPanStarted;
+    bool initialPanPrepared;
     bool initialPanRunning;
 
     void Awake()
@@ -46,9 +47,9 @@ public class CameraController : MonoBehaviour
     void Update()
     {   
         HandleSphereNavigation();
-        if (!isCurrentSphereInteracted && !initialPanStarted)
+        if (!isCurrentSphereInteracted && !initialPanPrepared)
         {
-            StartCoroutine(StartInitialPan());
+            startInitialPan = StartCoroutine(StartInitialPan());
         }
     }
 
@@ -72,7 +73,7 @@ public class CameraController : MonoBehaviour
 
     IEnumerator StartInitialPan()
     {
-        initialPanStarted = true;
+        initialPanPrepared = true;
         yield return new WaitForSeconds(initialPanDelay);
         initialPan = StartCoroutine(InitialPan());
     }
@@ -82,7 +83,7 @@ public class CameraController : MonoBehaviour
     {
         initialPanRunning = true;
 
-        while(!isCurrentSphereInteracted)
+        while(!isCurrentSphereInteracted && initialPanRunning)
         {
             if (initialPanSpeed < initialPanMaxSpeed)
             {
@@ -96,18 +97,23 @@ public class CameraController : MonoBehaviour
     }
 
     void ResetFlags(GameObject currentLocationSphere)
-    {
-        initialPanSpeed = initialPanCurrentSpeed;
-        isCurrentSphereInteracted = false;
-        initialPanStarted = false;
-        initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
-
+    {  
         // prevent running multiple coroutines
+        if (initialPanPrepared)
+        {
+            StopCoroutine(startInitialPan); 
+        }
         if (initialPanRunning)
         {
-            StopCoroutine(initialPan);
+            // StopCoroutine(initialPan);
             initialPanRunning = false;
         }
+
+        initialPanSpeed = initialPanCurrentSpeed;
+        isCurrentSphereInteracted = false;
+        initialPanPrepared = false;
+        initialRotationDir = Random.Range(0, 2) == 0 ? -1 : 1;
+
     }
 
     void HandleSphereNavigation()

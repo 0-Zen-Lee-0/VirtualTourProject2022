@@ -9,6 +9,7 @@ public class TourManager : MonoBehaviour
     public GameObject[] locationSpheres;
     [SerializeField] int initialLocationSphereIndex;
 
+    // event triggered when a location sphere is selected
     public static event Action<GameObject> onLocationSphereChanged;
 
     // Note: Inconsistent; if I make this public, there would be no point in sending a game object from the event
@@ -140,5 +141,10 @@ public class TourManager : MonoBehaviour
         {
             locationSphere.SetActive(false);
         }
+    }
+
+    public void ChooseCampus(int campusIndex)
+    {
+        UIControl.Instance.ChooseCampus(campusIndex);
     }
 }
