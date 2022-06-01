@@ -106,6 +106,7 @@ public class CameraController : MonoBehaviour
         if (initialPanRunning)
         {
             StopCoroutine(initialPan);
+            initialPanRunning = false;
         }
     }
 
