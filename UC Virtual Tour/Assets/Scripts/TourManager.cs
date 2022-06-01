@@ -146,6 +146,5 @@ public class TourManager : MonoBehaviour
     public void ChooseCampus(int campusIndex)
     {
         UIControl.Instance.ChooseCampus(campusIndex);
-        UIManager.Instance.showVideoPanel();
     }
 }

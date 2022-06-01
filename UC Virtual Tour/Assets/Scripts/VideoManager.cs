@@ -13,14 +13,22 @@ public class VideoManager : MonoBehaviour
         videoPlayer = GetComponent<VideoPlayer>();
     }
 
-    public void StartVideo(VideoClip introductoryClip)
+    public void StartVideo(CampusData campusData)
     {
-        videoPlayer.clip = introductoryClip;
-        videoPlayer.Play();
+        if (!campusData.IsIntroductoryClipPlayed)
+        {
+            UIManager.Instance.showVideoPanel();
+            VideoClip introductoryClip = campusData.introductoryClip;
+            campusData.IsIntroductoryClipPlayed = true;
+            videoPlayer.clip = introductoryClip;
+            videoPlayer.Play();
+        }
     }
 
     public void StopVideo()
     {
+        UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
+        
     }
 }

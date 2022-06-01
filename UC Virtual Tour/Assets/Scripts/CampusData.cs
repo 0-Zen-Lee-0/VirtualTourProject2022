@@ -5,5 +5,7 @@ using UnityEngine.Video;
 
 public class CampusData : MonoBehaviour
 {
+    
+    public VideoClip introductoryClip;
     public bool IsIntroductoryClipPlayed;
 }

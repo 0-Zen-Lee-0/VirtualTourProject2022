@@ -1273,6 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introductoryClip: {fileID: 0}
   IsIntroductoryClipPlayed: 0
 --- !u!1 &71909268
 GameObject:
@@ -2681,8 +2682,8 @@ MonoBehaviour:
         m_MethodName: StartVideo
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 32900000, guid: 9c1a322feda6517429a64fe6311545b8, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoClip, UnityEngine
+          m_ObjectArgument: {fileID: 70789349}
+          m_ObjectArgumentAssemblyTypeName: CampusData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3468,6 +3469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introductoryClip: {fileID: 0}
   IsIntroductoryClipPlayed: 0
 --- !u!1001 &258771839
 PrefabInstance:
@@ -8698,8 +8700,8 @@ MonoBehaviour:
         m_MethodName: StartVideo
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 32900000, guid: e8408f9d717cc6a47b8e2fe0a286aa7c, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoClip, UnityEngine
+          m_ObjectArgument: {fileID: 244604455}
+          m_ObjectArgumentAssemblyTypeName: CampusData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10146,6 +10148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introductoryClip: {fileID: 0}
   IsIntroductoryClipPlayed: 0
 --- !u!1001 &794941334
 PrefabInstance:
@@ -12188,8 +12191,8 @@ MonoBehaviour:
         m_MethodName: StartVideo
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 32900000, guid: 8b4ce87797deb814c8025d62bfd37a25, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoClip, UnityEngine
+          m_ObjectArgument: {fileID: 784870810}
+          m_ObjectArgumentAssemblyTypeName: CampusData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
