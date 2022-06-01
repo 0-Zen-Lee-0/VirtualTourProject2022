@@ -19,6 +19,9 @@ public class DescriptionManager : MonoBehaviour
         // makes sure that the entry was filled out, if not, the overlay button will not be shown
         if (currentLocationSphere.GetComponent<LocationSphereData>().locationDescription.Length > 0)
         {
+            // show description panel
+            UIManager.Instance.ToggleDescriptionPanel();
+
             descriptionButton.gameObject.SetActive(true);
 
             string locationName = currentLocationSphere.GetComponent<LocationSphereData>().locationName;
