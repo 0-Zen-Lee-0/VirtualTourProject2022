@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject rightButtonsPanel;
     [SerializeField] GameObject slideshowPanel;
     [SerializeField] GameObject descriptionPanel;
+    [SerializeField] GameObject videoPanel;
 
     [SerializeField] Button audioButton;
     [SerializeField] Sprite nonMuteSprite;
