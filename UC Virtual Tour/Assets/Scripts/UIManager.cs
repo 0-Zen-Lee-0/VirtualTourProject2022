@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowSlideshowPanel()
     {
+        descriptionPanel.SetActive(false);
         slideshowPanel.SetActive(true);
     }
 
