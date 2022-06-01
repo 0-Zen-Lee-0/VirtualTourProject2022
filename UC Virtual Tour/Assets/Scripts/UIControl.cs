@@ -40,16 +40,21 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowCampusMenu(){
-        if(btnCmenu.image.sprite == upDown[0]){
+
+        if (campusMenu.activeSelf)
+        {
+            Debug.Log("1");
+            btnCmenu.image.sprite = upDown[1];
             HideUI();
+        }
+        else
+        {
+            Debug.Log("2");
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
-            btnCmenu.image.sprite = upDown[1];
             hider.SetActive(true);
-        }
-        else{
-            HideUI();
+            btnCmenu.image.sprite = upDown[1];
         }
     }
 
@@ -66,7 +71,7 @@ public class UIControl : MonoBehaviour
             //show smBtn
             smCampus[cNo].SetActive(true);
         }
-        if(campusMenu.activeSelf == true){
+        if(campusMenu.activeSelf){
             campusMenu.SetActive(false);
             btnCmenu.image.sprite = upDown[0];
         }

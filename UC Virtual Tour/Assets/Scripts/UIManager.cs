@@ -84,6 +84,11 @@ public class UIManager : MonoBehaviour
         descriptionPanel.SetActive(true);
     }
 
+    public void showVideoPanel()
+    {
+        videoPanel.SetActive(true);
+    }
+
     public void DisableDescriptionPanel()
     {
         descriptionPanel.SetActive(false);
