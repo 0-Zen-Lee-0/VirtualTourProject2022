@@ -21167,11 +21167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531152209723566940, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_Name
-      value: MediaCentre
+      value: IPadArea
       objectReference: {fileID: 0}
     - target: {fileID: 3177264160713915310, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_text
-      value: Media Centre
+      value: IPad Area
       objectReference: {fileID: 0}
     - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
