@@ -1232,6 +1232,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70789347}
+  - component: {fileID: 70789348}
+  - component: {fileID: 70789349}
   m_Layer: 0
   m_Name: Campus_Main
   m_TagString: Untagged
@@ -1260,6 +1262,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &70789348
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70789346}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 9c1a322feda6517429a64fe6311545b8, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.505
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &70789349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70789346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &71909268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 244604454}
+  - component: {fileID: 244604455}
   m_Layer: 0
   m_Name: Campus_Legarda
   m_TagString: Untagged
@@ -3429,6 +3479,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244604455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244604453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &258771839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10050,6 +10112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 784870809}
+  - component: {fileID: 784870810}
   m_Layer: 0
   m_Name: Campus_Libertad
   m_TagString: Untagged
@@ -10080,6 +10143,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &784870810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784870808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &794941334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12294,7 +12369,7 @@ MonoBehaviour:
   minFieldOfView: 40
   maxFieldOfView: 110
   defaulFieldOfView: 90
-  initialPanDelay: 0
+  initialPanDelay: 1.5
   initialPanSpeed: 0.5
   initialPanMaxSpeed: 5
   initialPanAcceleration: 0.7
@@ -20648,7 +20723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8641268, y: 0.016703704}
   m_AnchorMax: {x: 0.975, y: 0.10444445}
-  m_AnchoredPosition: {x: -0.5, y: -8.636719}
+  m_AnchoredPosition: {x: -0.5, y: -8.63678}
   m_SizeDelta: {x: 0.1499939, y: 18.8056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737712932
