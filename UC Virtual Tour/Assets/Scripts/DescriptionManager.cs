@@ -20,7 +20,7 @@ public class DescriptionManager : MonoBehaviour
         if (currentLocationSphere.GetComponent<LocationSphereData>().locationDescription.Length > 0)
         {
             // show description panel
-            UIManager.Instance.ToggleDescriptionPanel();
+            UIManager.Instance.showDescriptionPanel();
 
             descriptionButton.gameObject.SetActive(true);
 

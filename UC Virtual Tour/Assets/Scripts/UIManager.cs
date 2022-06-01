@@ -78,6 +78,11 @@ public class UIManager : MonoBehaviour
         descriptionPanel.SetActive(!currentState);
     }
 
+    public void showDescriptionPanel()
+    {
+        descriptionPanel.SetActive(true);
+    }
+
     public void DisableDescriptionPanel()
     {
         descriptionPanel.SetActive(false);
