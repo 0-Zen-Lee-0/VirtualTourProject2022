@@ -17,16 +17,20 @@ public class VideoManager : MonoBehaviour
 
     public void StartVideo(CampusData campusData)
     {
+        locationSphereIndex = campusData.locationSphereIndex;
+
         if (!campusData.IsIntroductoryClipPlayed)
         {
             UIManager.Instance.showVideoPanel();
-
-            locationSphereIndex = campusData.locationSphereIndex;
 
             VideoClip introductoryClip = campusData.introductoryClip;
             campusData.IsIntroductoryClipPlayed = true;
             videoPlayer.clip = introductoryClip;
             videoPlayer.Play();
+        }
+        else 
+        {
+            LoadSite();
         }
     }
 
@@ -41,6 +45,11 @@ public class VideoManager : MonoBehaviour
         UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
 
+        LoadSite();
+    }
+
+    void LoadSite()
+    {
         TourManager.Instance.LoadSite(locationSphereIndex);
     }
 }
