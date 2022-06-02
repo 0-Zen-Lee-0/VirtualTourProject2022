@@ -19,7 +19,6 @@ public class UIControl : MonoBehaviour
     
     public Button[] leftPanelButton;
     public GameObject[] buildingFloorGroup;
-    public GameObject[] buildingFloor;
     public GameObject[] specialSite;
 
     //hider
