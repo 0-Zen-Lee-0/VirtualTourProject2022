@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] float rotateSpeed;
+    // Base speed at 60 fps
+    [SerializeField] float rotateSpeed = 4;
     [SerializeField] float zoomSpeed;
     [SerializeField] float scrollZoomSpeed;
     [SerializeField] float minFieldOfView = 40.0f;
@@ -36,6 +37,10 @@ public class CameraController : MonoBehaviour
     bool initialPanPrepared;
     bool initialPanRunning;
 
+    // needed for showing fps
+    float deltaTime;
+    float fps;
+
     void Awake()
     {
         // TODO: Refactor this, design conflicts existing
@@ -46,6 +51,9 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {   
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        fps = 1.0f / deltaTime;
+
         HandleSphereNavigation();
         if (!isCurrentSphereInteracted && !initialPanPrepared)
         {
@@ -129,13 +137,14 @@ public class CameraController : MonoBehaviour
         
         if (Input.GetMouseButton(0) && isDragging)
         {
+            float fpsMultiplier = fps / 60;
             dragVelocity = Input.mousePosition - lastMousePosition;
             lastMousePosition = Input.mousePosition;    
 
             lastPanInput = currentPanInput;
             
             // rotate camera based on mouse actions
-            currentPanInput =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + (dragVelocity.y * Time.deltaTime * rotateSpeed)), transform.localEulerAngles.y + (dragVelocity.x * Time.deltaTime * -rotateSpeed), 0);
+            currentPanInput =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + (dragVelocity.y * Time.deltaTime * rotateSpeed * fpsMultiplier)), transform.localEulerAngles.y + (dragVelocity.x * Time.deltaTime * -rotateSpeed * fpsMultiplier), 0);
         }
         else if (Input.GetMouseButtonUp(0))
         {
