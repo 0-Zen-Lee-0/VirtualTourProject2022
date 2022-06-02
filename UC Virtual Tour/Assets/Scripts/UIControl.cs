@@ -117,7 +117,7 @@ public class UIControl : MonoBehaviour
     }
 
     public void ShowFloorButtons(int building){
-        if(buildingFloorGroup[building].activeSelf == false)
+        if(!buildingFloorGroup[building].activeSelf)
         {
             HideBuildingFloorGroups();
             buildingFloorGroup[building].SetActive(true);
