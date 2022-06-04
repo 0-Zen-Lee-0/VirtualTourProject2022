@@ -48,12 +48,14 @@ public class UIControl : MonoBehaviour
         }
         else
         {
+            HideUI();
             Debug.Log("2");
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
             hider.SetActive(true);
             btnCmenu.image.sprite = upDown[1];
+            
         }
     }
 
@@ -127,7 +129,7 @@ public class UIControl : MonoBehaviour
         RemainSelectedColor(building);
     }
     public void RemainSelectedColor(int building){
-        if(building<16)
+        if(building<16 || building>52)
         {
             ReturnToWhite();
         }
