@@ -129,7 +129,7 @@ public class UIControl : MonoBehaviour
         RemainSelectedColor(building);
     }
     public void RemainSelectedColor(int building){
-        if(building<16 || building>52)
+        if(building<15 || building>52)
         {
             ReturnToWhite();
         }
