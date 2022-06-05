@@ -30,11 +30,31 @@ public class VideoManager : MonoBehaviour
             videoPlayer.clip = introductoryClip;
             videoPlayer.Play();
         }
-        else 
+        else
         {
             LoadSite();
         }
     }
+
+    //public void StartVideo(CampusData campusData)
+    //{
+    //    locationSphereIndex = campusData.locationSphereIndex;
+
+    //    if (!campusData.IsIntroductoryClipPlayed)
+    //    {
+    //        TourManager.Instance.LoadInitialSite();
+
+    //        UIManager.Instance.showVideoPanel();
+
+    //        campusData.IsIntroductoryClipPlayed = true;
+    //        videoPlayer.url = campusData.introductoryClipURL;
+    //        videoPlayer.Play();
+    //    }
+    //    else
+    //    {
+    //        LoadSite();
+    //    }
+    //}
 
     // TODO: current implementation is too hacky, try to find a more elegant implementation
     void StopVideo(VideoPlayer videoPlayer)

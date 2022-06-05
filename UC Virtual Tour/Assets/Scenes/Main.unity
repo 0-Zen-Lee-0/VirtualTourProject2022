@@ -3626,6 +3626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introductoryClip: {fileID: 32900000, guid: f2baeb941801b18409c048fa37774368, type: 3}
+  introductoryClipURL: https://www.youtube.com/watch?v=nADTdV8wsXQ&ab_channel=ThirteeNov
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 9
 --- !u!1001 &71442052
@@ -8044,6 +8045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introductoryClip: {fileID: 32900000, guid: 82ad776da2bcf4f4c9d46993b27591ab, type: 3}
+  introductoryClipURL: https://www.youtube.com/watch?v=nADTdV8wsXQ&ab_channel=ThirteeNov
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 43
 --- !u!1001 &247824526
@@ -26545,6 +26547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introductoryClip: {fileID: 32900000, guid: f3756521804d7bb43b755f688a91e3fa, type: 3}
+  introductoryClipURL: 
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 51
 --- !u!1001 &794941334
@@ -32292,7 +32295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdf521c536f6a04695779647c739486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 4
+  rotateSpeed: 6
   zoomSpeed: 200
   scrollZoomSpeed: 500
   minFieldOfView: 40
@@ -34047,7 +34050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8641268, y: 0.016703704}
   m_AnchorMax: {x: 0.975, y: 0.10444445}
-  m_AnchoredPosition: {x: 22, y: -27.069092}
+  m_AnchoredPosition: {x: 22, y: -27.069153}
   m_SizeDelta: {x: 0.15, y: -18.069}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030037161
