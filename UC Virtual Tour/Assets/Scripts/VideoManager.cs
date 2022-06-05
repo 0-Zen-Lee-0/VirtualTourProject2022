@@ -21,6 +21,8 @@ public class VideoManager : MonoBehaviour
 
         if (!campusData.IsIntroductoryClipPlayed)
         {
+            TourManager.Instance.LoadInitialSite();
+
             UIManager.Instance.showVideoPanel();
 
             VideoClip introductoryClip = campusData.introductoryClip;

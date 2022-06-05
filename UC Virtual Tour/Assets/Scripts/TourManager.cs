@@ -32,7 +32,7 @@ public class TourManager : MonoBehaviour
 
     void Start()
     {
-        LoadInitialSite();
+        // LoadInitialSite();
     }
  
     void Update()
@@ -56,7 +56,7 @@ public class TourManager : MonoBehaviour
         }
     }
 
-    void LoadInitialSite()
+    public void LoadInitialSite()
     {
         HideAllSites();
 
