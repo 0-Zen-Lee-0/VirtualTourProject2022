@@ -46,7 +46,7 @@ public class VideoManager : MonoBehaviour
     {
         UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
-
+        videoPlayer.targetTexture.Release();
         LoadSite();
     }
 

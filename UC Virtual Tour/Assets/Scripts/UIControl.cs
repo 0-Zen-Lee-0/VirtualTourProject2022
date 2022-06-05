@@ -42,14 +42,12 @@ public class UIControl : MonoBehaviour
 
         if (campusMenu.activeSelf)
         {
-            Debug.Log("1");
             btnCmenu.image.sprite = upDown[1];
             HideUI();
         }
         else
         {
             HideUI();
-            Debug.Log("2");
             //show Campus Menu
             campusMenu.SetActive(true);
             //change sprite
