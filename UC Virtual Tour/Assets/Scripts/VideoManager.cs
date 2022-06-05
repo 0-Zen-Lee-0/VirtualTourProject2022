@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,40 +22,35 @@ public class VideoManager : MonoBehaviour
 
         if (!campusData.IsIntroductoryClipPlayed)
         {
-            TourManager.Instance.LoadInitialSite();
+            try
+            {
+                TourManager.Instance.LoadInitialSite();
 
-            UIManager.Instance.showVideoPanel();
+                
 
-            VideoClip introductoryClip = campusData.introductoryClip;
-            campusData.IsIntroductoryClipPlayed = true;
-            videoPlayer.clip = introductoryClip;
-            videoPlayer.Play();
+                //VideoClip introductoryClip = campusData.introductoryClip;
+                //campusData.IsIntroductoryClipPlayed = true;
+                //videoPlayer.clip = introductoryClip;
+                //videoPlayer.Play();
+
+                campusData.IsIntroductoryClipPlayed = true;
+                videoPlayer.url = campusData.introductoryClipURL;
+
+                Debug.Log("what");
+                UIManager.Instance.showVideoPanel();
+                videoPlayer.Play();
+            }
+            // TODO: Specify exception
+            catch (Exception e)
+            {
+                StopVideo();
+            }
         }
         else
         {
             LoadSite();
         }
     }
-
-    //public void StartVideo(CampusData campusData)
-    //{
-    //    locationSphereIndex = campusData.locationSphereIndex;
-
-    //    if (!campusData.IsIntroductoryClipPlayed)
-    //    {
-    //        TourManager.Instance.LoadInitialSite();
-
-    //        UIManager.Instance.showVideoPanel();
-
-    //        campusData.IsIntroductoryClipPlayed = true;
-    //        videoPlayer.url = campusData.introductoryClipURL;
-    //        videoPlayer.Play();
-    //    }
-    //    else
-    //    {
-    //        LoadSite();
-    //    }
-    //}
 
     // TODO: current implementation is too hacky, try to find a more elegant implementation
     void StopVideo(VideoPlayer videoPlayer)
@@ -64,6 +60,7 @@ public class VideoManager : MonoBehaviour
 
     public void StopVideo()
     {
+        Debug.Log("stop!");
         UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
         videoPlayer.targetTexture.Release();
