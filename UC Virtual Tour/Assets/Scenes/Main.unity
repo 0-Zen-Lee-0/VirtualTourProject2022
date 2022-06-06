@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
@@ -44110,25 +44110,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: locationDescription
-      value: 'The quick brown fox jumped over the lazy dog.
-
-        The lazy dog
-        saw the fox but ignored it.
-
-        The fox returned with a chicken in its
-        mouth.
-
-        The lazy dog stopped it and stole the chicken.
-
-        The
-        chicken thought it was saved but it was eaten by the dog.
-
-        The dog
-        chased the fox away.
-
-        The fox goes home hungry.
-
-'
+      value: "Welcome to the University of the Cordilleras!\r\nPioneering the Higher
+        Education in the mountain highlands of the Cordillera Region,\r\nWe\u2019d
+        like to give you a tour around the facilities and offices of the University!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: slideshowImages.Array.size
