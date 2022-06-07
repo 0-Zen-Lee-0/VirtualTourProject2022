@@ -280,12 +280,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Auditorium
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'With 250 seating capacity, the auditorium serves as a venue for musical
+        events, plays, and competitions, and symposiums. It is located on the 9th
+        floor. '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -924,12 +934,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CITCS
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Information Technology and Computer Sciences provides
+        competent instruction geared towards the development of responsible and capable
+        IT professionals.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -5381,12 +5401,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CHTM Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: Located on the 9th floor, the CHTM Kitchen is equipped with industry-grade
+        Hot and Cold kitchen equipment.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -7974,11 +8003,6 @@ Transform:
 --- !u!1 &238847865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3835747564983437016, guid: 852b06757787fde45ad4e67f659527be, type: 3}
-  m_PrefabInstance: {fileID: 1388688537}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &238847866 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7317549797947858363, guid: 852b06757787fde45ad4e67f659527be, type: 3}
   m_PrefabInstance: {fileID: 1388688537}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &240045558
@@ -11168,12 +11192,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Animation Laboratory
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: This laboratory is for the ICT-Animation students   to conduct traditional
+        animation tasks like clean-up and in-betweening. With 50 animation lightbox
+        units, this is one of the biggest traditional animation laboratories in Northern
+        Luzon.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -14284,12 +14319,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: COA
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Accountancy provides an educational program through which
+        students can prepare themselves for accounting related endeavors, and increasing
+        levels of responsibility in business and society.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -17995,12 +18040,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Cashier
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: Located near the Entrance of Gate 2, the Cashier can easily be accessed
+        by students and guests for payment purposes.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -21468,12 +21522,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: BRS Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: "The BRS Building, built in 2010 in memory of the founder Atty Benjamin
+        Romero Salvosa, houses the College of Law where he taught law and served
+        as the College\u2019s first dean. \r\n\r\nThe BRS Building also houses the
+        Kalilayan Museum, and various college and senior high school laboratories.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -25184,12 +25249,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Theatre
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The activity hub of the University, the theater holds various events
+        such as talks, seminars, and cultural celebrations. It is located on the
+        6th floor of the Main Building.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -28698,12 +28773,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Television Studio
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: On the 1st floor lies the Studio-laboratory where communication students
+        can simulate real-life TV Productions.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -28729,131 +28813,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
   m_PrefabInstance: {fileID: 805326359}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &807840694
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 238847866}
-    m_Modifications:
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 267.301
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 61
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 133.6505
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -101.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1531152209723566940, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Name
-      value: InternetLib
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177264160713915310, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_text
-      value: Internet Library
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 484510328}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 484510330}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadSite
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RemainSelectedColor
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 171
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 47
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
 --- !u!1001 &810203523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29011,12 +28970,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Media Centre
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The media centre provides students access to multimedia devices and
+        internet libraries for a more efficient and technology-driven learning.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -31510,12 +31478,20 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Kalilayan Museum
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'At the ground floor is Kalilayan: the UC Founders'' Center.'
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -31874,12 +31850,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Medical Clinic
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: "On the ground floor of the F Building is the Medical Clinic which caters
+        to students and staffs\u2019 medical needs."
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -35150,12 +35135,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Administrative Offices
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: "Located in the Main Building are:\nThe President\u2019s Office,\r\nOffice
+        of the Vice President for Administration and Academic Services,\r\nFinance
+        and Accounting\r,\nHuman Resources and Development,\r\nRegistrars,\r\nLibraries\r,
+        and\nSafety and Security\r."
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -37524,7 +37520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032061027047489561, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_text
-      value: Animation Classroom
+      value: Animation Laboratory
       objectReference: {fileID: 0}
     - target: {fileID: 3835747564983437016, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_Name
@@ -37536,7 +37532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622656126408284935, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_Name
-      value: AnimationClassroom
+      value: AnimationLab
       objectReference: {fileID: 0}
     - target: {fileID: 5511768299875209959, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_AnchorMax.y
@@ -38534,12 +38530,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: COL
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'The College of Law stands as one of the most prestigious Law Schools
+        in Northern Luzon, equipped with a moot court and law library, and the only
+        school in Northern Luzon that has produced 2 bar topnotchers: Janet Abuel
+        and Noel Malimban '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -39083,12 +39090,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CON
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Nursing envisions itself as a community of dedicated,
+        responsible scholars providing quality education to develop committed, compassionate
+        and culturally bound professional nurses.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -40078,131 +40095,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7317549797947858363, guid: 852b06757787fde45ad4e67f659527be, type: 3}
   m_PrefabInstance: {fileID: 1145848951}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1148524205
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 238847866}
-    m_Modifications:
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 267.301
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 61
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 133.6505
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -172.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267258700422364292, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1531152209723566940, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_Name
-      value: IPadArea
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177264160713915310, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_text
-      value: IPad Area
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 484510328}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 484510330}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadSite
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RemainSelectedColor
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 47
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
 --- !u!1001 &1154246814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40367,12 +40259,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Office of Student Affairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The student center of the university, The office provides holistic programs
+        and activities to ensure absolute welfare of students ranging from scholarships,
+        information services, counselling, career placement, and safety and discipline.
+        It is located on the 4th floor of the Science Building.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -40707,6 +40610,10 @@ PrefabInstance:
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: fieldOfView
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
@@ -42399,12 +42306,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Teacher Education aims to develop teachers who will be
+        effective agents in the realization of the national educational goals and
+        most importantly those who will be able to transform people into well-rounded
+        individuals capable of eliciting positive change in the society.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -43583,11 +43501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531152209723566940, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_Name
-      value: BroadcastingRoom
+      value: TelevisionStudio
       objectReference: {fileID: 0}
     - target: {fileID: 3177264160713915310, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_text
-      value: Broadcasting Room
+      value: MassCom Television Studio
       objectReference: {fileID: 0}
     - target: {fileID: 5362559089899198365, guid: f16c736258e50ee479bdb539033d22a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -46940,12 +46858,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Science Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: Constructed in 1977, the Science building houses the College of Engineering
+        and Architecture, Senior High School Office, Student Affairs, and the Gymnasium.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -47114,12 +47041,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: F Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'The F Building was built in 2014 and is currently housing the College
+        of Hospitality and Tourism Management, and the College of Business Administration. '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -47931,7 +47867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032061027047489561, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_text
-      value: Library Extension
+      value: Media Centre
       objectReference: {fileID: 0}
     - target: {fileID: 3835747564983437016, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_Name
@@ -47943,7 +47879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622656126408284935, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_Name
-      value: LibraryExtension
+      value: Media Centre
       objectReference: {fileID: 0}
     - target: {fileID: 5511768299875209959, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_AnchorMax.y
@@ -48015,7 +47951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7317549797947858363, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 203
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 7317549797947858363, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51777,12 +51713,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Cordilera Suites
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: Located on the 6th Floor, the Cordillera Suites is a mock hotel laboratory
+        for CHTM students to hone their skills in the field of hospitality management
+        using industry level facilities
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -52516,12 +52462,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: UC Canteen and Bookstore
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The canteen, located at the intersections of Science, Main, EDS and
+        BRS building caters to the students, staff, and guests of the University
+        with the bookstore offering souvenir items and UC paraphernalia.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -52773,6 +52729,10 @@ PrefabInstance:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Campo Libertad
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
@@ -53255,12 +53215,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CBA
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Business Administration aims to develop and enhance world-class
+        graduates in the field of business administration imbued with social responsibilities
+        and humane values
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -57433,12 +57403,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Auditorium
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'With 250 seating capacity, the auditorium serves as a venue for musical
+        events, plays, and competitions, and symposiums. It is located on the 9th
+        floor. '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -58442,6 +58422,13 @@ PrefabInstance:
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: In 1967, UC then Baguio Colleges Foundation, relocated to the main campus
+        at Harrison and Governor Pack Road, the Main Building houses various administrative
+        offices and the College of Information Technology and Computer Sciences,
+        and the College of Accountancy
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -63962,12 +63949,21 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Psychology Lab
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'Psychology Laboratory contains counseling rooms and play rooms to simulate
+        therapeutic sessions with clients. '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -64238,12 +64234,23 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: 'The UC Libraries houses collections of books that support the college
+        professional courses ranging from general and core collections, filipiniana,
+        periodicals, fiction, thesis and dissertations, Media Center and Internet
+        libraries. '
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -65414,12 +65421,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CAS
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Arts and Sciences advocates an education directed towards
+        the development of the whole person by providing a liberal education for
+        all students of the University of the Cordilleras.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -69774,12 +69791,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CHTM
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Hotel and Tourism Management offers programs with integrated
+        specializations and skills certification embedded with industry-driven curriculum
+        towards the production of globally competitive graduates.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
@@ -71834,12 +71861,22 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationName
+      value: CEA
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.y
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: locationDescription
+      value: The College of Engineering and Architecture aims to contribute to the
+        country's physical development, through modernization of its infrastructures,
+        and improvement of the material comforts of man.
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
