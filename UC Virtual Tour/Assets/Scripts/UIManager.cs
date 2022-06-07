@@ -54,6 +54,16 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void showRightButtonsPanel()
+    {
+        rightButtonsPanel.SetActive(true);
+    }
+
+    public void hideRightButtonsPanel()
+    {
+        rightButtonsPanel.SetActive(false);
+    }
+
     public void ShowSlideshowPanel()
     {
         descriptionPanel.SetActive(false);

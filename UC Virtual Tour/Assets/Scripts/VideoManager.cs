@@ -30,6 +30,8 @@ public class VideoManager : MonoBehaviour
                 videoPlayer.url = campusData.introductoryClipURL;
 
                 UIManager.Instance.showVideoPanel();
+                UIManager.Instance.hideRightButtonsPanel();
+                
                 videoPlayer.Play();
             }
             // TODO: Specify exception
@@ -54,6 +56,7 @@ public class VideoManager : MonoBehaviour
     public void StopVideo()
     {
         UIManager.Instance.hideVideoPanel();
+        UIManager.Instance.showRightButtonsPanel();
         videoPlayer.Stop();
         videoPlayer.targetTexture.Release();
         LoadSite();
