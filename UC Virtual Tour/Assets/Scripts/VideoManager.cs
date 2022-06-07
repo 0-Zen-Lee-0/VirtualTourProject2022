@@ -36,13 +36,13 @@ public class VideoManager : MonoBehaviour
                 campusData.IsIntroductoryClipPlayed = true;
                 videoPlayer.url = campusData.introductoryClipURL;
 
-                Debug.Log("what");
                 UIManager.Instance.showVideoPanel();
                 videoPlayer.Play();
             }
             // TODO: Specify exception
             catch (Exception e)
             {
+                Debug.Log(e);
                 StopVideo();
             }
         }
@@ -60,7 +60,6 @@ public class VideoManager : MonoBehaviour
 
     public void StopVideo()
     {
-        Debug.Log("stop!");
         UIManager.Instance.hideVideoPanel();
         videoPlayer.Stop();
         videoPlayer.targetTexture.Release();
