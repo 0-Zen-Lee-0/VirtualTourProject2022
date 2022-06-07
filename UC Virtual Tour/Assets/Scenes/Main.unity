@@ -4695,7 +4695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4708806099786424421, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_text
-      value: brs
+      value: brs  building
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148042, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_Pivot.x
@@ -12822,7 +12822,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4708806099786424421, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_text
-      value: htm
+      value: f  building
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148042, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_Pivot.x
@@ -24851,7 +24851,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4708806099786424421, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_text
-      value: main
+      value: main  building
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148042, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_Pivot.x
@@ -25074,7 +25074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1236618832711356051, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33821,7 +33821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032061027047489561, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_text
-      value: Clinic
+      value: Medical Clinic
       objectReference: {fileID: 0}
     - target: {fileID: 3835747564983437016, guid: 852b06757787fde45ad4e67f659527be, type: 3}
       propertyPath: m_Name
@@ -55162,7 +55162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4708806099786424421, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_text
-      value: science
+      value: science building
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148042, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_Pivot.x
@@ -64767,7 +64767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913624110105184078, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: locationIndex
-      value: 1011
+      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
@@ -66207,7 +66207,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4708806099786424421, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_text
-      value: nursing
+      value: EDS  building
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148042, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_Pivot.x
