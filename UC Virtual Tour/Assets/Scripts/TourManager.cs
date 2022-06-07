@@ -5,7 +5,7 @@ using UnityEngine;
 // TODO: null safety!
 public class TourManager : MonoBehaviour
 {
-    public static TourManager Instance {get; private set;}
+    public static TourManager Instance { get; private set; }
     public GameObject[] locationSpheres;
     [SerializeField] int initialLocationSphereIndex;
 
@@ -15,6 +15,8 @@ public class TourManager : MonoBehaviour
     // Note: Inconsistent; if I make this public, there would be no point in sending a game object from the event
     GameObject currentLocationSphere;
     GameObject previousLocationSphere;
+
+    public bool isFirstLocationSphereLoaded { get; private set; }
 
     [SerializeField] GameObject transitionSphere;
     [SerializeField] float transitionDuration = 1f;  
@@ -68,13 +70,53 @@ public class TourManager : MonoBehaviour
  
     public void LoadSite(int locationIndex)
     {
+        // set true to this bool, will be used for determining whether to show the bottom left panel at start
+        isFirstLocationSphereLoaded = true;
+
         // before loading the new site, keep reference of the previous one
         previousLocationSphere = currentLocationSphere;
         
         // assign the current location sphere
         currentLocationSphere = locationSpheres[locationIndex];
 
+        SetupBottomLeftUI(currentLocationSphere.name);
+
         StartCoroutine(StartTransition());
+    }
+
+    void SetupBottomLeftUI(string locationSphereName)
+    {
+        string[] nameSubstring = locationSphereName.Split("_");
+        string buildingName;
+        switch (nameSubstring[0])
+        {
+            case "C":
+                buildingName = "Campo Libertad";
+                break;
+            case "L":
+                buildingName = "Legarda";
+                break;
+            case "M":
+                buildingName = "Main";
+                break;
+            case "N":
+                buildingName = "EDS";
+                break;
+            case "U":
+                buildingName = "BRS";
+                break;
+            case "S":
+                buildingName = "Science";
+                break;
+            case "USG":
+                buildingName = "Intersection";
+                break;
+            default:
+                buildingName = nameSubstring[0];
+                break;
+        }
+        UIManager.Instance.setBottomLeftPanel(buildingName, nameSubstring[1]);
+        UIManager.Instance.showBottomLeftPanel();
     }
 
     IEnumerator StartTransition()

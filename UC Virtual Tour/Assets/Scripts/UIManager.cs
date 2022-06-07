@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 
     //[SerializeField] GameObject leftPanel;
     [SerializeField] GameObject rightButtonsPanel;
+    [SerializeField] GameObject bottomLeftPanel;
     [SerializeField] GameObject slideshowPanel;
     [SerializeField] GameObject descriptionPanel;
     [SerializeField] GameObject videoPanel;
@@ -18,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button audioButton;
     [SerializeField] Sprite nonMuteSprite;
     [SerializeField] Sprite muteSprite;
+
+    [SerializeField] TextMeshProUGUI buildingNameText;
+    [SerializeField] TextMeshProUGUI floorNameText;
 
     [SerializeField] TextMeshProUGUI locationNameText;
     [SerializeField] TextMeshProUGUI locationDescriptionText;
@@ -52,6 +56,22 @@ public class UIManager : MonoBehaviour
         {
             audioButton.image.sprite = nonMuteSprite;
         }
+    }
+
+    public void showBottomLeftPanel()
+    {
+        bottomLeftPanel.SetActive(true);
+    }
+
+    public void hideBottomLeftPanel()
+    {
+        bottomLeftPanel.SetActive(false);
+    }
+
+    public void setBottomLeftPanel(string buildingName, string floorName)
+    {
+        buildingNameText.text = buildingName;
+        floorNameText.text = floorName;
     }
 
     public void showRightButtonsPanel()

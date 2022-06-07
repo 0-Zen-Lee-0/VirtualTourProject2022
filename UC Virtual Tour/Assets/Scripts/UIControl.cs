@@ -38,12 +38,19 @@ public class UIControl : MonoBehaviour
         Instance = this;
     }
 
+    // TODO; refactor alongside HideUI, inefficient and too complex
     public void ShowCampusMenu(){
 
         if (campusMenu.activeSelf)
         {
             btnCmenu.image.sprite = upDown[1];
             HideUI();
+
+            // show bottom left panel
+            if (TourManager.Instance.isFirstLocationSphereLoaded)
+            {
+                UIManager.Instance.showBottomLeftPanel();
+            }
         }
         else
         {
@@ -53,7 +60,6 @@ public class UIControl : MonoBehaviour
             //change sprite
             hider.SetActive(true);
             btnCmenu.image.sprite = upDown[1];
-            
         }
     }
 
@@ -77,6 +83,8 @@ public class UIControl : MonoBehaviour
         //hide hider
         hider.SetActive(false);
 
+        // hide bottom left panel
+        UIManager.Instance.hideBottomLeftPanel();
     }
     public void BackToHome(){
         //show start page

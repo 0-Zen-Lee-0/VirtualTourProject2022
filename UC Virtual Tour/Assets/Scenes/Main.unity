@@ -15833,12 +15833,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightButtonsPanel: {fileID: 1737712930}
+  bottomLeftPanel: {fileID: 844729276}
   slideshowPanel: {fileID: 1390143589}
   descriptionPanel: {fileID: 558044902}
   videoPanel: {fileID: 1945254893}
   audioButton: {fileID: 1667951869}
   nonMuteSprite: {fileID: 21300000, guid: 0d0c0daf2f8e9924e9f3741821464e7b, type: 3}
   muteSprite: {fileID: 21300000, guid: 932702650b288ae4db896a5974828f72, type: 3}
+  buildingNameText: {fileID: 548644611}
+  floorNameText: {fileID: 1713087992}
   locationNameText: {fileID: 659800421}
   locationDescriptionText: {fileID: 1758004094}
 --- !u!114 &484510335
@@ -32162,7 +32165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &844729277
 RectTransform:
   m_ObjectHideFlags: 0
