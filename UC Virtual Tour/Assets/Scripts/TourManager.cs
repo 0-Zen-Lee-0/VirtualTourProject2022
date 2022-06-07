@@ -29,11 +29,6 @@ public class TourManager : MonoBehaviour
 
         Instance = this;
     }
-
-    void Start()
-    {
-        // LoadInitialSite();
-    }
  
     void Update()
     {

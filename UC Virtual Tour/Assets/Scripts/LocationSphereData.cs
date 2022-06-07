@@ -16,4 +16,7 @@ public class LocationSphereData : MonoBehaviour
     public string locationName;
     [TextArea]
     public string locationDescription;
+    // to be shown at the bottom left corner
+    public string locationBuilding;
+    public string locationFloor;
 }
