@@ -1135,6 +1135,10 @@ PrefabInstance:
       value: CITCS
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 0222cf8fd4b684a45a2c217d51f509b9, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -7852,7 +7856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.017708331, y: 0.91455555}
   m_AnchorMax: {x: 0.05741666, y: 0.9833333}
-  m_AnchoredPosition: {x: 36.12805, y: -34.5282}
+  m_AnchoredPosition: {x: 36.128113, y: -34.5282}
   m_SizeDelta: {x: 74.12071, y: 71.95663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217297987
@@ -8459,7 +8463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.017708331, y: 0.91455555}
   m_AnchorMax: {x: 0.05741666, y: 0.9833333}
-  m_AnchoredPosition: {x: 36.12805, y: -34.5282}
+  m_AnchoredPosition: {x: 36.128113, y: -34.5282}
   m_SizeDelta: {x: 74.12071, y: 71.95663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240550423
@@ -14857,6 +14861,10 @@ PrefabInstance:
       value: COA
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d00afec06efd644c9fa41ceb7a12dc6, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -18136,8 +18144,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.149, y: 32.91}
-  m_SizeDelta: {x: 397.28, y: 79.82}
+  m_AnchoredPosition: {x: 46.149, y: 32.91}
+  m_SizeDelta: {x: 367.28, y: 79.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548644611
 MonoBehaviour:
@@ -18186,15 +18194,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -26588,6 +26596,10 @@ PrefabInstance:
       value: Theatre
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 1dc559fcdfc617a4281002a66e64d3d1, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -32165,7 +32177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &844729277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42523,6 +42535,10 @@ PrefabInstance:
       value: Office of Student Affairs
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: aa278621fdf7d9e4093dc5302d76d99f, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -42875,6 +42891,10 @@ PrefabInstance:
       propertyPath: locationName
       value: UC Canteen and Bookstore
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 89ed432b8963adb4c86bd1fd780c03ba, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -46739,7 +46759,7 @@ PrefabInstance:
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: audioNarration
       value: 
-      objectReference: {fileID: 8300000, guid: 514b33a93aa84704186698a51239d9fb, type: 3}
+      objectReference: {fileID: 8300000, guid: cec7665bdbbe63a4bb2f0068ad8ec241, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -49747,6 +49767,10 @@ PrefabInstance:
       propertyPath: locationName
       value: Science Building
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 5bf6f65e6bb826a4dbb2596f573f3479, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -55641,6 +55665,10 @@ PrefabInstance:
       propertyPath: locationName
       value: UC Canteen and Bookstore
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 89ed432b8963adb4c86bd1fd780c03ba, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -61890,8 +61918,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -62292,6 +62320,10 @@ PrefabInstance:
       propertyPath: locationName
       value: Main Building
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: dee777c478af80041b3ce3a589d9847d, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -64738,6 +64770,10 @@ PrefabInstance:
       value: SHS Office
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 6629bed3efcd4064fa580377054b6df5, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -66965,7 +67001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.017708331, y: 0.91455555}
   m_AnchorMax: {x: 0.05741666, y: 0.9833333}
-  m_AnchoredPosition: {x: 36.12805, y: -34.5282}
+  m_AnchoredPosition: {x: 36.128113, y: -34.5282}
   m_SizeDelta: {x: 74.12071, y: 71.95663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874390261
@@ -68499,6 +68535,10 @@ PrefabInstance:
       propertyPath: locationName
       value: Library
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ff61b757cff81b49ae6cd9cb85e266e, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -76369,6 +76409,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CEA
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 966e1f3f5c813af47b3451ac3dfec32c, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0

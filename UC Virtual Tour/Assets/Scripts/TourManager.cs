@@ -97,16 +97,16 @@ public class TourManager : MonoBehaviour
                 buildingName = "Legarda";
                 break;
             case "M":
-                buildingName = "Main";
+                buildingName = "Main Building";
                 break;
             case "N":
-                buildingName = "EDS";
+                buildingName = "EDS Building";
                 break;
             case "U":
-                buildingName = "BRS";
+                buildingName = "BRS Building";
                 break;
             case "S":
-                buildingName = "Science";
+                buildingName = "Science Building";
                 break;
             case "USG":
                 buildingName = "Intersection";
