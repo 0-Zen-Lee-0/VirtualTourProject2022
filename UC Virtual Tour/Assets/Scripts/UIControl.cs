@@ -97,7 +97,8 @@ public class UIControl : MonoBehaviour
         hider.SetActive(false);
         //hide description panel and locator
         UIManager.Instance.DisableDescriptionPanel();
-        UIManager.Instance.hideBottomLeftPanel();
+        //show bottom left panel
+        UIManager.Instance.showBottomLeftPanel();
     }
 
     public void ChooseCampus(int campusNumber){
@@ -115,6 +116,7 @@ public class UIControl : MonoBehaviour
         campusMenu.SetActive(false);
         cNo = campusNumber;
         hider.SetActive(false);
+        ShowSideMenu(cNo);
     }
 
     public void ShowSideMenu(int campusNumber){
