@@ -88,6 +88,7 @@ public class TourManager : MonoBehaviour
     {
         string[] nameSubstring = locationSphereName.Split("_");
         string buildingName;
+        string floorName;
         switch (nameSubstring[0])
         {
             case "C":
@@ -99,6 +100,9 @@ public class TourManager : MonoBehaviour
             case "M":
                 buildingName = "Main Building";
                 break;
+            case "F":
+                buildingName = "F Building";
+                break;
             case "N":
                 buildingName = "EDS Building";
                 break;
@@ -108,6 +112,9 @@ public class TourManager : MonoBehaviour
             case "S":
                 buildingName = "Science Building";
                 break;
+            case "G":
+                buildingName = "Gym";
+                break;
             case "USG":
                 buildingName = "Intersection";
                 break;
@@ -115,8 +122,32 @@ public class TourManager : MonoBehaviour
                 buildingName = nameSubstring[0];
                 break;
         }
-        UIManager.Instance.setBottomLeftPanel(buildingName, nameSubstring[1]);
-        UIManager.Instance.showBottomLeftPanel();
+        switch (nameSubstring[1])
+        {
+            case "1":
+                floorName = "1st floor";
+                break;
+            case "2":
+                floorName = "2nd floor";
+                break;
+            case "3":
+                floorName = "3rd floor";
+                break;
+            case "0":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+            case "10":
+                floorName = nameSubstring[1]+"th floor";
+                break;
+            default:
+                floorName = nameSubstring[1];
+                break;
+        }
+        UIManager.Instance.setBottomLeftPanel(buildingName, floorName);
     }
 
     IEnumerator StartTransition()

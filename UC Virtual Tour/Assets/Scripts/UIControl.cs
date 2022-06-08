@@ -75,6 +75,8 @@ public class UIControl : MonoBehaviour
             HideBuildingFloorGroups();
             //show smBtn
             smCampus[cNo].SetActive(true);
+            // show bottom left panel
+            UIManager.Instance.showBottomLeftPanel();
         }
         if(campusMenu.activeSelf){
             campusMenu.SetActive(false);
@@ -82,9 +84,7 @@ public class UIControl : MonoBehaviour
         }
         //hide hider
         hider.SetActive(false);
-
-        // hide bottom left panel
-        UIManager.Instance.hideBottomLeftPanel();
+        
     }
     public void BackToHome(){
         //show start page
@@ -95,6 +95,9 @@ public class UIControl : MonoBehaviour
         }
         //hide hider
         hider.SetActive(false);
+        //hide description panel and locator
+        UIManager.Instance.DisableDescriptionPanel();
+        UIManager.Instance.hideBottomLeftPanel();
     }
 
     public void ChooseCampus(int campusNumber){
@@ -122,6 +125,8 @@ public class UIControl : MonoBehaviour
         hider.SetActive(true);
         //hide smBtn
         smCampus[campusNumber].SetActive(false);
+        // hide bottom left panel
+        UIManager.Instance.hideBottomLeftPanel();
     }
 
     public void ShowFloorButtons(int building){
