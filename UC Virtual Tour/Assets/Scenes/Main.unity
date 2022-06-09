@@ -4638,7 +4638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1236618832711356051, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -53872,7 +53872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796588323063930746, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7266248306275253493, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
@@ -69910,7 +69910,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4848703260396916506, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: hoverMove
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328939864563102002, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
@@ -70095,6 +70095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042550845}
     m_Modifications:
+    - target: {fileID: -4848703260396916506, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
+      propertyPath: hoverMove
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 328939864563102002, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
       value: 0
