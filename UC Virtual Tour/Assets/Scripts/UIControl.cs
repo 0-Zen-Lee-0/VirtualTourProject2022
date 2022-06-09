@@ -131,6 +131,13 @@ public class UIControl : MonoBehaviour
         UIManager.Instance.hideBottomLeftPanel();
     }
 
+    public void FirstShowSideMenu(int campusNumber)
+    {
+        startPage.SetActive(true);
+        campusMenu.SetActive(true);
+        sideMenus[campusNumber].SetActive(true);
+    }
+
     public void ShowFloorButtons(int building){
         if(!buildingFloorGroup[building].activeSelf)
         {

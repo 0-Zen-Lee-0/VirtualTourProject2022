@@ -240,6 +240,9 @@ public class TourManager : MonoBehaviour
         // show selected location
         currentLocationSphere.SetActive(true);
 
+        // show left campus selector ui
+        UIControl.Instance.ChooseCampus(campusIndex);
+
         // call event 
         onLocationSphereChanged?.Invoke(currentLocationSphere);
 
