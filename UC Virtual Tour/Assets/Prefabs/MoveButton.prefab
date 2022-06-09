@@ -140,14 +140,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56526b7ec511204d8003c75d15c454a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverTime: 2
-  hoverMove: 1
+  hoverTime: 1
+  hoverMove: 0
   dot: {fileID: 7613273216739934746}
   originalSprite: {fileID: 21300012, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
-  leftSprite: {fileID: 21300050, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
-  rightSprite: {fileID: 21300054, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
-  upSprite: {fileID: 21300008, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
-  downSprite: {fileID: 21300010, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
+  leftSprite: {fileID: 21300000, guid: bd4f1d9e4daf61b49b958c1a1d8592dc, type: 3}
+  rightSprite: {fileID: 21300000, guid: 7af36b2eb7ab25f408fe19b3880b834c, type: 3}
+  upSprite: {fileID: 21300000, guid: 4c3fd4dde68ebb443bc55e88c8b33765, type: 3}
+  downSprite: {fileID: 21300000, guid: 6b1efb0ab019bb248921f30310a1025d, type: 3}
 --- !u!1001 &115335256255566000
 PrefabInstance:
   m_ObjectHideFlags: 0
