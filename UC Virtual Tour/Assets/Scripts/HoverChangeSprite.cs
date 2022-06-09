@@ -17,12 +17,6 @@ public class HoverChangeSprite : MonoBehaviour
     [SerializeField] Sprite rightSprite;
     [SerializeField] Sprite upSprite;
     [SerializeField] Sprite downSprite;
-    
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -30,7 +24,6 @@ public class HoverChangeSprite : MonoBehaviour
 
         if (activeHoverTime > 0 && !isHoverActive)
         {
-            Debug.Log("yay");
             SwitchHover();
         }
         else if (activeHoverTime <= 0)
