@@ -233,7 +233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1164,6 +1164,14 @@ PrefabInstance:
         competent instruction geared towards the development of responsible and capable
         IT professionals.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: af69551efe59a6a4881667c8967ad640, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: M_3_CITCS
@@ -3259,7 +3267,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8597,7 +8605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14746,6 +14754,7 @@ Transform:
   - {fileID: 1959745040}
   - {fileID: 568236292}
   - {fileID: 1698182519}
+  - {fileID: 1126406071}
   - {fileID: 1901713559}
   - {fileID: 1201245827}
   - {fileID: 1442623742}
@@ -15119,6 +15128,14 @@ PrefabInstance:
         students can prepare themselves for accounting related endeavors, and increasing
         levels of responsibility in business and society.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f335fe11e8ece41a2cf2069d164cef, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: M_2_COA
@@ -15340,7 +15357,6 @@ GameObject:
   - component: {fileID: 480905476}
   - component: {fileID: 480905475}
   - component: {fileID: 480905474}
-  - component: {fileID: 480905477}
   m_Layer: 5
   m_Name: Hider
   m_TagString: Untagged
@@ -15411,7 +15427,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480905475}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 484510330}
+        m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
+        m_MethodName: HideUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480905475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15450,18 +15478,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480905472}
   m_CullTransparentMesh: 1
---- !u!114 &480905477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480905472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577868258518e754fad866ea78bf0e6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &484249437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16955,7 +16971,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24645,7 +24661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41100,6 +41116,14 @@ PrefabInstance:
         Janet
         Abuel and Noel Malimban '
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8967564bbed2fd14ead9a5edb4730622, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: U_6_COL
@@ -41591,23 +41615,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1698182519}
+    m_TransformParent: {fileID: 467022058}
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41671,6 +41695,14 @@ PrefabInstance:
         responsible scholars providing quality education to develop committed, compassionate
         and culturally bound professional nurses.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2647215a1b1b1024e847bf0b5496972c, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: N_5_CON
@@ -45140,7 +45172,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45205,6 +45237,14 @@ PrefabInstance:
         most importantly those who will be able to transform people into well-rounded
         individuals capable of eliciting positive change in the society.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 566ef5c628e8ab94b85d232da966187b, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: N_5_CTE
@@ -47115,7 +47155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.57357645
+      value: 0.8191521
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -47123,7 +47163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.81915206
+      value: -0.5735764
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -47135,7 +47175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 110
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -48120,7 +48160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50225,7 +50265,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52745,7 +52785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61554,7 +61594,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -63535,7 +63575,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -65749,6 +65789,30 @@ PrefabInstance:
       propertyPath: lookRotation.y
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4823545d092babd44a0eb26895b12d69, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3318e4fcbfbae03439d48cf00e2039ea, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: bd18ddd9e2f3f3145882b9c8ef0ece38, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1447ce8973da16641a7d23cf6416cc29, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 98dc38d343848f44e9bd83bf1350df35, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: N_3_ELearning
@@ -68406,7 +68470,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 99772547336140284, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69102,6 +69166,42 @@ PrefabInstance:
         periodicals, fiction, thesis and dissertations, Media Center and Internet
         libraries. '
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: a8fa7c930bf02d244bfe7906ca23f602, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7cc250b087c05144e9b0ce33cbc20fc3, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 03f033a9e2cefc543b38e5a8dfaa5b84, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: a273bd5277e933341b2a7d2a8522b922, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e5ffa579990ebb488c9332c58f0827e, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bacedcd8ee6c2a4fa7b3bdb58b9d71a, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: ec880e722909a06469d038730a92f77e, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: ec880e722909a06469d038730a92f77e, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: M_5_libraryEntrance
@@ -74900,6 +75000,14 @@ PrefabInstance:
         specializations and skills certification embedded with industry-driven curriculum
         towards the production of globally competitive graduates.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d1ff734a7466a5a45bbdcc13332b2fc7, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: F_8_Stairs
