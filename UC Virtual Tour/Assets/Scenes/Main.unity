@@ -3980,6 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  campusName: Main
   introductoryClip: {fileID: 32900000, guid: f2baeb941801b18409c048fa37774368, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/MainCampus_Smallerhmph.mp4
   IsIntroductoryClipPlayed: 0
@@ -8757,6 +8758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  campusName: Legarda
   introductoryClip: {fileID: 32900000, guid: 82ad776da2bcf4f4c9d46993b27591ab, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Legarda.mp4
   IsIntroductoryClipPlayed: 0
@@ -29477,6 +29479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4286b5012f3774a93cb40efd888679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  campusName: Libertad
   introductoryClip: {fileID: 32900000, guid: f3756521804d7bb43b755f688a91e3fa, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Campo Libertad.mp4
   IsIntroductoryClipPlayed: 0

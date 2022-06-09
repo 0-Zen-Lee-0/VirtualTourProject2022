@@ -67,6 +67,23 @@ public class TourManager : MonoBehaviour
         // call event 
         onLocationSphereChanged?.Invoke(currentLocationSphere);
     }
+
+    // TODO: refactor, two load sites function with tons of repetitive code
+    public void LoadSite(int locationIndex, int campusIndex)
+    {
+        // set true to this bool, will be used for determining whether to show the bottom left panel at start
+        isFirstLocationSphereLoaded = true;
+
+        // before loading the new site, keep reference of the previous one
+        previousLocationSphere = currentLocationSphere;
+        
+        // assign the current location sphere
+        currentLocationSphere = locationSpheres[locationIndex];
+
+        SetupBottomLeftUI(currentLocationSphere.name);
+
+        StartCoroutine(StartTransition(campusIndex));
+    }
  
     public void LoadSite(int locationIndex)
     {
@@ -151,6 +168,51 @@ public class TourManager : MonoBehaviour
     }
 
     IEnumerator StartTransition()
+    {
+
+        // animating transition sphere
+        transitionSphere.SetActive(true);
+        Material material = transitionSphere.GetComponent<Renderer>().material;
+        Renderer renderer = transitionSphere.GetComponent<Renderer>();
+
+        // fade out
+        Color color = material.color;
+        float frameTime = Time.deltaTime;
+        float duration = transitionDuration / 2;
+        for (float i = 0; i < duration; i += frameTime)
+        {
+            frameTime = Time.deltaTime;
+
+            color.a = i / duration;
+            material.color = color;
+
+            yield return new WaitForSeconds(frameTime);
+        }
+
+        // hide previous location
+        previousLocationSphere.SetActive(false);
+        LoadLocationSphereData();
+        // show selected location
+        currentLocationSphere.SetActive(true);
+
+        // call event 
+        onLocationSphereChanged?.Invoke(currentLocationSphere);
+
+        // fade in
+        for (float i = duration; i > 0; i -= frameTime)
+        {
+            frameTime = Time.deltaTime;
+
+            color.a = i / duration;
+            material.color = color;
+
+            yield return new WaitForSeconds(frameTime);
+        }
+        transitionSphere.SetActive(false);
+    }
+
+    // for load site called by initial campus buttons
+    IEnumerator StartTransition(int campusIndex)
     {
 
         // animating transition sphere

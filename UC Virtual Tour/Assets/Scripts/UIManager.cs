@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         //leftPanel.SetActive(true);
-        rightButtonsPanel.SetActive(true);
+        // rightButtonsPanel.SetActive(true);
 
         setAudioButtonSprite();        
     }
