@@ -4638,7 +4638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1236618832711356051, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15381,6 +15381,7 @@ GameObject:
   - component: {fileID: 480905476}
   - component: {fileID: 480905475}
   - component: {fileID: 480905474}
+  - component: {fileID: 480905477}
   m_Layer: 5
   m_Name: Hider
   m_TagString: Untagged
@@ -15451,19 +15452,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480905475}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 484510330}
-        m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: HideUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &480905475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15502,6 +15491,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480905472}
   m_CullTransparentMesh: 1
+--- !u!114 &480905477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480905472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577868258518e754fad866ea78bf0e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &484249437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53871,7 +53872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796588323063930746, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7266248306275253493, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
@@ -69909,7 +69910,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4848703260396916506, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: hoverMove
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328939864563102002, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
@@ -70094,6 +70095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042550845}
     m_Modifications:
+    - target: {fileID: -4848703260396916506, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
+      propertyPath: hoverMove
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 328939864563102002, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
       propertyPath: m_RootOrder
       value: 0
