@@ -143,7 +143,7 @@ MonoBehaviour:
   hoverTime: 1
   hoverMove: 0
   dot: {fileID: 7613273216739934746}
-  originalSprite: {fileID: 21300012, guid: 0fd21678280ad9c47aa2d32baf438c5d, type: 3}
+  originalSprite: {fileID: 21300000, guid: 3023d33fc04f3854eb080c092ae83432, type: 3}
   leftSprite: {fileID: 21300000, guid: bd4f1d9e4daf61b49b958c1a1d8592dc, type: 3}
   rightSprite: {fileID: 21300000, guid: 7af36b2eb7ab25f408fe19b3880b834c, type: 3}
   upSprite: {fileID: 21300000, guid: 4c3fd4dde68ebb443bc55e88c8b33765, type: 3}
@@ -155,6 +155,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7266248306275253493}
     m_Modifications:
+    - target: {fileID: 7511449383283888810, guid: be836fee27d068841a11375214db63d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3023d33fc04f3854eb080c092ae83432, type: 3}
+    - target: {fileID: 7511449383283888810, guid: be836fee27d068841a11375214db63d4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511449383283888810, guid: be836fee27d068841a11375214db63d4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511449383283888810, guid: be836fee27d068841a11375214db63d4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7511449383470245706, guid: be836fee27d068841a11375214db63d4, type: 3}
       propertyPath: m_RootOrder
       value: 0
