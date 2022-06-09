@@ -15082,7 +15082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
-      value: M_2_stairsB_central
+      value: M_2_COA
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_IsActive
@@ -18754,6 +18754,14 @@ PrefabInstance:
         Criminal Sociology, Crime Detection and Investigation, Forensic Science and
         Correctional Administration professions.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a6d324aa02589b43a3d6f350f8daef0, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: L_2_CCJEFaculty
@@ -50105,6 +50113,14 @@ PrefabInstance:
         the development of the whole person by providing a liberal education for
         all students of the University of the Cordilleras.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58f41febf9c5d4347bd2a5983495a695, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: N_4_CAS
@@ -56682,6 +56698,14 @@ PrefabInstance:
         graduates in the field of business administration imbued with social responsibilities
         and humane values
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 89e72da91740710469a82a80a485b0be, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: F_8_CBA
@@ -76663,6 +76687,14 @@ PrefabInstance:
         country's physical development, through modernization of its infrastructures,
         and improvement of the material comforts of man.
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: slideshowImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: efe60584186cdd242ab357eddc6acd15, type: 3}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Name
       value: S_2_CEA
