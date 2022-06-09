@@ -60,6 +60,7 @@ public class HoverChangeSprite : MonoBehaviour
     void ReturnHover()
     {
         isHoverActive = false;
+        dot.sprite = originalSprite;
     }
 
     void OnMouseOver()
