@@ -20,6 +20,8 @@ public class TourManager : MonoBehaviour
 
     CampusData currentCampusData;
 
+    Vector3 startingLookRotation;
+
     [SerializeField] GameObject transitionSphere;
     [SerializeField] float transitionDuration = 1f;  
 
@@ -45,7 +47,9 @@ public class TourManager : MonoBehaviour
             {
                 if (hit.transform.gameObject.tag == "Move")
                 {
-                    LoadSite(hit.transform.gameObject.GetComponent<MoveLocation>().GetLocationIndex());
+                    int locationIndex = hit.transform.gameObject.GetComponent<MoveLocation>().GetLocationIndex();
+                    startingLookRotation = hit.transform.gameObject.GetComponent<MoveLocation>().GetLookRotation();
+                    LoadSite(locationIndex);
                 }
                 if (hit.transform.gameObject.tag == "Description")
                 {
@@ -219,7 +223,9 @@ public class TourManager : MonoBehaviour
     // for load site called by initial campus buttons
     IEnumerator StartTransition(int campusIndex)
     {
+        // Temporary fix
         UIControl.Instance.ChooseCampus(campusIndex);
+
         // animating transition sphere
         transitionSphere.SetActive(true);
         Material material = transitionSphere.GetComponent<Renderer>().material;
@@ -266,10 +272,13 @@ public class TourManager : MonoBehaviour
 
     void LoadLocationSphereData()
     {
-        Vector3 defaultLookRotation = currentLocationSphere.GetComponent<LocationSphereData>().lookRotation;
+        if (startingLookRotation == Vector3.zero)
+        {
+            startingLookRotation = currentLocationSphere.GetComponent<LocationSphereData>().lookRotation;
+        }
         float defaultFieldOfView = currentLocationSphere.GetComponent<LocationSphereData>().fieldOfView;
 
-        Camera.main.GetComponent<CameraController>().ResetCamera(defaultLookRotation, defaultFieldOfView);
+        Camera.main.GetComponent<CameraController>().ResetCamera(startingLookRotation, defaultFieldOfView);
     }
 
     // TODO: deprecate? If so, replace int indexes with gameobject references

@@ -10,7 +10,7 @@ public class CampusData : MonoBehaviour
 
     public VideoClip introductoryClip;
     public string introductoryClipURL;
-    public bool IsIntroductoryClipPlayed;
+    [HideInInspector] public bool IsIntroductoryClipPlayed;
     public int locationSphereIndex;
 
     void Start()
