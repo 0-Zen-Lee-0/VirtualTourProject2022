@@ -73,7 +73,7 @@ public class UIControl : MonoBehaviour
     public void HideUI(){
         if(LeftMenus[cNo].activeSelf){
 
-            HideLeftMenu(cNo);
+            HideLeftMenu();
             foreach(GameObject specialSite in specialSite)
             {
                 specialSite.SetActive(false);
@@ -140,8 +140,11 @@ public class UIControl : MonoBehaviour
     public void ShowLeftMenu(int campusNumber){
         LeftMenus[campusNumber].SetActive(true);
     }
-    public void HideLeftMenu(int campusNumber){
-        LeftMenus[campusNumber].SetActive(false);
+    public void HideLeftMenu(){
+        foreach(GameObject leftMenu in LeftMenus)
+        {
+            leftMenu.SetActive(false);
+        }
     }
     
     public void MainCampusBldgBtnBehavior(int building){
@@ -155,7 +158,6 @@ public class UIControl : MonoBehaviour
         RemainSelectedColor(building);
     }
 
-
     public void ShowFloorButtons(int building){
             buildingFloorGroup[building].SetActive(true);
     }
@@ -165,7 +167,6 @@ public class UIControl : MonoBehaviour
             buildingFloorGroup.SetActive(false);
         }
     }
-
 
     public void RemainSelectedColor(int building){
         if(building<15 || building>52)
@@ -205,7 +206,6 @@ public class UIControl : MonoBehaviour
         }
     }
 
-
     public void ShowSpecial(int floor){
         HideSpecial();
         specialSite[floor].SetActive(true); 
@@ -216,7 +216,6 @@ public class UIControl : MonoBehaviour
             specialSite.SetActive(false);
         }
     }
-
 
     public void ShowHider(){
         hider.SetActive(true);
