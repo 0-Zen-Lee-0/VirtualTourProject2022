@@ -18,6 +18,8 @@ public class TourManager : MonoBehaviour
 
     public bool isFirstLocationSphereLoaded { get; private set; }
 
+    CampusData currentCampusData;
+
     [SerializeField] GameObject transitionSphere;
     [SerializeField] float transitionDuration = 1f;  
 
@@ -69,8 +71,12 @@ public class TourManager : MonoBehaviour
     }
 
     // TODO: refactor, two load sites function with tons of repetitive code
-    public void LoadSite(int locationIndex, int campusIndex)
+    public void LoadSite(CampusData campusData)
     {
+        currentCampusData = campusData;
+        int locationIndex = campusData.locationSphereIndex;
+        int campusIndex = campusData.campusIndex;
+
         // set true to this bool, will be used for determining whether to show the bottom left panel at start
         isFirstLocationSphereLoaded = true;
 
