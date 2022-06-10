@@ -3981,6 +3981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campusName: Main
+  campusIndex: 0
   introductoryClip: {fileID: 32900000, guid: f2baeb941801b18409c048fa37774368, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/MainCampus_Smallerhmph.mp4
   IsIntroductoryClipPlayed: 0
@@ -8747,6 +8748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campusName: Legarda
+  campusIndex: 0
   introductoryClip: {fileID: 32900000, guid: 82ad776da2bcf4f4c9d46993b27591ab, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Legarda.mp4
   IsIntroductoryClipPlayed: 0
@@ -29456,6 +29458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campusName: Libertad
+  campusIndex: 0
   introductoryClip: {fileID: 32900000, guid: f3756521804d7bb43b755f688a91e3fa, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Campo Libertad.mp4
   IsIntroductoryClipPlayed: 0
@@ -65645,7 +65648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bfed6bffe11e1cb43bf8ded53e52fdbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6575bc01da89a584da2e81a7f978d0ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

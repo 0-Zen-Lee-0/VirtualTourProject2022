@@ -25,6 +25,7 @@ public class UIControl : MonoBehaviour
     public GameObject hider;
     
     public int cNo = 0;
+    CampusData campusData;
     bool inMain;
 
     void Awake()
@@ -40,12 +41,10 @@ public class UIControl : MonoBehaviour
 
     // TODO; refactor alongside HideUI, inefficient and too complex
     public void ShowCampusMenuBtnBehavior(){
-
+        HideUI();
         if (campusMenu.activeSelf)
         {
             btnCmenu.image.sprite = upDown[1];
-            HideUI();
-
             // show bottom left panel
             if (TourManager.Instance.isFirstLocationSphereLoaded)
             {
@@ -54,7 +53,6 @@ public class UIControl : MonoBehaviour
         }
         else
         {
-            HideUI();
             ShowCampusMenu();
             ShowHider();
             btnCmenu.image.sprite = upDown[1];
