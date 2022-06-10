@@ -21,8 +21,13 @@ public class AudioManager : MonoBehaviour
 
         Instance = this;
 
-        TourManager.onLocationSphereChanged += PlayAudioNarration;
+        TourManager.onLocationSphereChanged += UpdateAudioSystem;
         source = GetComponent<AudioSource>();
+    }
+
+    void UpdateAudioSystem(GameObject currentLocationSphere)
+    {
+        PlayAudioNarration(currentLocationSphere);
     }
 
     void PlayAudioNarration(GameObject currentLocationSphere)
@@ -32,8 +37,14 @@ public class AudioManager : MonoBehaviour
         // TODO: refactor, find a shorthand for this
         if (currentLocationSphere.GetComponent<LocationSphereData>().audioNarration != null)
         {
+            UIManager.Instance.ShowAudioButton();
+
             clip = currentLocationSphere.GetComponent<LocationSphereData>().audioNarration;
             source.PlayOneShot(clip);
+        }
+        else
+        {
+            UIManager.Instance.HideAudioButton();
         }
     }
 

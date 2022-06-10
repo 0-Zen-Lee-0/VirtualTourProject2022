@@ -103,6 +103,16 @@ public class UIManager : MonoBehaviour
         setAudioButtonSprite();
     }
 
+    public void ShowAudioButton()
+    {
+        audioButton.gameObject.SetActive(true);
+    }
+
+    public void HideAudioButton()
+    {
+        audioButton.gameObject.SetActive(false);
+    }
+
     public void ToggleDescriptionPanel()
     {
         bool currentState = descriptionPanel.activeSelf;
