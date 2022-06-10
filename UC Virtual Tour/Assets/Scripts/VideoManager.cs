@@ -21,6 +21,19 @@ public class VideoManager : MonoBehaviour
     {
         locationSphereIndex = campusData.locationSphereIndex;
 
+        switch(campusData.campusName)
+        {
+            case "Legarda":
+                campusIndex = 0;
+                break;
+            case "Main":
+                campusIndex = 1;
+                break;
+            case "Libertad":
+                campusIndex = 2;
+                break;
+        }
+
         if (!campusData.IsIntroductoryClipPlayed)
         {
             try
@@ -31,7 +44,7 @@ public class VideoManager : MonoBehaviour
                 videoPlayer.url = campusData.introductoryClipURL;
 
                 UIManager.Instance.showVideoPanel();
-                UIManager.Instance.hideRightButtonsPanel();
+                // UIManager.Instance.hideRightButtonsPanel();
                 
                 videoPlayer.Play();
             }
@@ -44,18 +57,6 @@ public class VideoManager : MonoBehaviour
         }
         else
         {
-            switch(campusData.campusName)
-            {
-                case "Legarda":
-                    campusIndex = 0;
-                    break;
-                case "Main":
-                    campusIndex = 1;
-                    break;
-                case "Libertad":
-                    campusIndex = 2;
-                    break;
-            }
             LoadSite();
         }
     }

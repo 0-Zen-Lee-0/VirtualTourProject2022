@@ -5053,7 +5053,7 @@ PrefabInstance:
       objectReference: {fileID: 484510330}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowFloorButtons
+      value: MainCampusBldgBtnBehavior
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6168,7 +6168,7 @@ GameObject:
   - component: {fileID: 147808366}
   - component: {fileID: 147808365}
   m_Layer: 5
-  m_Name: SMBtns
+  m_Name: ShowLeftMenuBtns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7870,7 +7870,7 @@ GameObject:
   - component: {fileID: 217297988}
   - component: {fileID: 217297987}
   m_Layer: 5
-  m_Name: SideMenuBtn_Lg
+  m_Name: ShowLeftMenuBtn_Lg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7942,7 +7942,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 484510330}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: ShowSideMenu
+        m_MethodName: ShowLeftMenuBtnBehavior
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8477,7 +8477,7 @@ GameObject:
   - component: {fileID: 240550424}
   - component: {fileID: 240550423}
   m_Layer: 5
-  m_Name: SideMenuBtn_Li
+  m_Name: ShowLeftMenuBtn_Ca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8549,7 +8549,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 484510330}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: ShowSideMenu
+        m_MethodName: ShowLeftMenuBtnBehavior
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13626,7 +13626,7 @@ PrefabInstance:
       objectReference: {fileID: 484510330}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowFloorButtons
+      value: MainCampusBldgBtnBehavior
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -15856,11 +15856,11 @@ MonoBehaviour:
   upDown:
   - {fileID: 21300000, guid: fe4d64c6dff519a40b8ad35a4ff382cd, type: 3}
   - {fileID: 21300000, guid: 6eb0fed1adcaa34418d3d82bac8202a5, type: 3}
-  smCampus:
+  ShowLeftMenuBtns:
   - {fileID: 217297985}
   - {fileID: 1874390259}
   - {fileID: 240550421}
-  sideMenus:
+  LeftMenus:
   - {fileID: 1698251659}
   - {fileID: 238060316}
   - {fileID: 1888446173}
@@ -22485,7 +22485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_Name
-      value: Menu_Main
+      value: LeftMenu_Main
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_IsActive
@@ -26656,7 +26656,7 @@ PrefabInstance:
       objectReference: {fileID: 484510330}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowFloorButtons
+      value: MainCampusBldgBtnBehavior
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -37730,7 +37730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8641268, y: 0.016703704}
   m_AnchorMax: {x: 0.975, y: 0.10444445}
-  m_AnchoredPosition: {x: 22, y: -27.069275}
+  m_AnchoredPosition: {x: 22, y: -27.069397}
   m_SizeDelta: {x: 0.15, y: -18.069}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030037161
@@ -59266,7 +59266,7 @@ PrefabInstance:
       objectReference: {fileID: 484510330}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowFloorButtons
+      value: MainCampusBldgBtnBehavior
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -67634,7 +67634,7 @@ GameObject:
   - component: {fileID: 1874390262}
   - component: {fileID: 1874390261}
   m_Layer: 5
-  m_Name: SideMenuBtn_Mn
+  m_Name: ShowLeftMenuBtn_Mn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67706,7 +67706,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 484510330}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: ShowSideMenu
+        m_MethodName: ShowLeftMenuBtnBehavior
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71567,7 +71567,7 @@ PrefabInstance:
       objectReference: {fileID: 484510330}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowFloorButtons
+      value: MainCampusBldgBtnBehavior
       objectReference: {fileID: 0}
     - target: {fileID: 4708806101085148045, guid: c57b50e6a84f88a419fde54a5810b0f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -75654,7 +75654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_Name
-      value: Menu_CampoLibertad
+      value: LeftMenu_CampoLibertad
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_IsActive
@@ -80041,7 +80041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_Name
-      value: Menu_Legarda
+      value: LeftMenu_Legarda
       objectReference: {fileID: 0}
     - target: {fileID: 4633386719034434729, guid: fc4ddafbded3c6948a0396b16e451c02, type: 3}
       propertyPath: m_IsActive
