@@ -89,6 +89,7 @@ public class UIControl : MonoBehaviour
     }
 
     public void BackToHome(){
+        TourManager.Instance.LoadInitialSite();
 
         startPage.SetActive(true);
         foreach (GameObject leftMenu in LeftMenus)

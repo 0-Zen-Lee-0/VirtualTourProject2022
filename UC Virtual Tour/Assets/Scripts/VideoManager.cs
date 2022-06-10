@@ -19,13 +19,11 @@ public class VideoManager : MonoBehaviour
     public void StartVideo(CampusData campusData)
     {
         selectedCampusData = campusData;
-        
+
         if (!campusData.IsIntroductoryClipPlayed)
         {
             try
             {
-                TourManager.Instance.LoadInitialSite();
-
                 campusData.IsIntroductoryClipPlayed = true;
                 videoPlayer.url = campusData.introductoryClipURL;
 
