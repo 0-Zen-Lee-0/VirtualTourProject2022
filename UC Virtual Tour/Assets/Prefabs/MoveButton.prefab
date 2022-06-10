@@ -146,7 +146,7 @@ MonoBehaviour:
   originalSprite: {fileID: 21300000, guid: 3023d33fc04f3854eb080c092ae83432, type: 3}
   leftSprite: {fileID: 21300000, guid: bd4f1d9e4daf61b49b958c1a1d8592dc, type: 3}
   rightSprite: {fileID: 21300000, guid: 7af36b2eb7ab25f408fe19b3880b834c, type: 3}
-  upSprite: {fileID: 21300000, guid: 4c3fd4dde68ebb443bc55e88c8b33765, type: 3}
+  upSprite: {fileID: 21300000, guid: 535df661d0a0564488ce8f96c7cc4776, type: 3}
   downSprite: {fileID: 21300000, guid: 6b1efb0ab019bb248921f30310a1025d, type: 3}
 --- !u!1001 &115335256255566000
 PrefabInstance:
