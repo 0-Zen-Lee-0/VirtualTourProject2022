@@ -39,7 +39,7 @@ public class UIControl : MonoBehaviour
     }
 
     // TODO; refactor alongside HideUI, inefficient and too complex
-    public void ShowCampusMenu(){
+    public void ShowCampusMenuBtnBehavior(){
 
         if (campusMenu.activeSelf)
         {
@@ -55,9 +55,7 @@ public class UIControl : MonoBehaviour
         else
         {
             HideUI();
-            //show Campus Menu
-            campusMenu.SetActive(true);
-            //change sprite
+            ShowCampusMenu();
             ShowHider();
             btnCmenu.image.sprite = upDown[1];
         }
@@ -66,7 +64,7 @@ public class UIControl : MonoBehaviour
     public void FirstShowSideMenu(int campusNumber)
     {
         startPage.SetActive(true);
-        campusMenu.SetActive(true);
+        ShowCampusMenu();
         ShowLeftMenu(campusNumber);
     }
 
@@ -74,19 +72,16 @@ public class UIControl : MonoBehaviour
         if(LeftMenus[cNo].activeSelf){
 
             HideLeftMenu();
-            foreach(GameObject specialSite in specialSite)
-            {
-                specialSite.SetActive(false);
-            }
+            HideSpecial();
             ReturnToWhite();
             HideBuildingFloorGroups();
-
+            //Fix This
             ShowLeftMenuBtn(cNo);
 
             UIManager.Instance.showBottomLeftPanel();
         }
         if(campusMenu.activeSelf){
-            campusMenu.SetActive(false);
+            HideCampusMenu();
             btnCmenu.image.sprite = upDown[0];
         }
 
@@ -102,9 +97,7 @@ public class UIControl : MonoBehaviour
         }
 
         HideHider();
-        //hide description panel and locator
         UIManager.Instance.DisableDescriptionPanel();
-        //show bottom left panel
         UIManager.Instance.showBottomLeftPanel();
     }
 
@@ -114,9 +107,16 @@ public class UIControl : MonoBehaviour
         startPage.SetActive(false);
         HideLeftMenuBtns();
         ShowLeftMenuBtn(campusNumber);
-        campusMenu.SetActive(false);
+        HideCampusMenu();
         HideHider();
         ShowLeftMenuBtnBehavior(campusNumber);
+    }
+
+    public void ShowCampusMenu(){
+        campusMenu.SetActive(true);
+    }
+    public void HideCampusMenu(){
+        campusMenu.SetActive(false);
     }
 
     public void ShowLeftMenuBtnBehavior(int campusNumber){

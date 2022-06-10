@@ -10482,7 +10482,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 484510330}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: ShowCampusMenu
+        m_MethodName: ShowCampusMenuBtnBehavior
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
