@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationIndex: -1
+  lookRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &1556638175659200886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56526b7ec511204d8003c75d15c454a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverTime: 1
+  hoverTime: 0.4
   hoverMove: 0
   dot: {fileID: 7613273216739934746}
   originalSprite: {fileID: 21300000, guid: 3023d33fc04f3854eb080c092ae83432, type: 3}

@@ -284,6 +284,10 @@ PrefabInstance:
       value: Auditorium
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: a28a95a0095d4ca4c86ace503571944e, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -5663,6 +5667,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CHTM Kitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 69e05edc539a1ec4f872197646a653ea, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -14933,6 +14941,10 @@ PrefabInstance:
       value: Legarda Campus
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: f3e37b941ec3f5d4fbfa209da71814e6, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -15
       objectReference: {fileID: 0}
@@ -18837,6 +18849,10 @@ PrefabInstance:
       value: CCJE
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a0011ffc29d5f144a8908c1c38574af, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: locationDescription
       value: College of Criminal Justice Education  is an  institution that provides
         quality instruction and effective training for Law, Law Enforcement Administration,
@@ -19427,6 +19443,10 @@ PrefabInstance:
       propertyPath: locationName
       value: EDS Building
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: b19cae0a251cfee44b42f19232341141, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -22863,6 +22883,10 @@ PrefabInstance:
       propertyPath: locationName
       value: TBI
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ab4540938af8ee459a261405278ebbe, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: locationDescription
       value: 'The TBI provides business and technology transfer opportunities among
@@ -33999,6 +34023,10 @@ PrefabInstance:
       value: Medical Clinic
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: cad6ecaf60385894783066a8179d4876, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -37733,7 +37761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8641268, y: 0.016703704}
   m_AnchorMax: {x: 0.975, y: 0.10444445}
-  m_AnchoredPosition: {x: 22, y: -27.069397}
+  m_AnchoredPosition: {x: 22, y: -27.069214}
   m_SizeDelta: {x: 0.15, y: -18.069}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030037161
@@ -41235,6 +41263,10 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 9442fae1fdc970049b4f8d1993509a98, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: -6.64
       objectReference: {fileID: 0}
@@ -41712,6 +41744,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CON
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: adc8738b17f52214fad7d785a02701f5, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -45253,6 +45289,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CTE
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: c8a97613728eac54485762a3a4fcdb49, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -50347,6 +50387,10 @@ PrefabInstance:
       value: CAS
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 91ba3d437eb43904bb34cc695162be26, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -50533,6 +50577,10 @@ PrefabInstance:
       propertyPath: locationName
       value: F Building
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 747c877de9f8c294aa0d065f8b672777, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -55432,6 +55480,10 @@ PrefabInstance:
       value: Cordillera Suites
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: a1bdb400495b9614fa38986436cc92f4, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -56466,6 +56518,10 @@ PrefabInstance:
       value: Campo Libertad
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: d139ee9779cc56948b65dda29de9222a, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 339.47217
       objectReference: {fileID: 0}
@@ -56967,6 +57023,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CBA
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b8f9484da2db5948ae4f698a56ef772, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -61699,6 +61759,10 @@ PrefabInstance:
       propertyPath: locationName
       value: Auditorium
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: a28a95a0095d4ca4c86ace503571944e, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
@@ -70459,6 +70523,10 @@ PrefabInstance:
       value: Cashier
       objectReference: {fileID: 0}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 394cf4ea3b3b7f64a9ea671f2222df97, type: 3}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -75061,6 +75129,10 @@ PrefabInstance:
       propertyPath: locationName
       value: CHTM
       objectReference: {fileID: 0}
+    - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
+      propertyPath: audioNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c702c14f1e6f4a4cb7507b0d650b82d, type: 3}
     - target: {fileID: 105910965507552664, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: lookRotation.x
       value: 0

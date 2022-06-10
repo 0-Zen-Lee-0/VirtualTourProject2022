@@ -41,10 +41,10 @@ public class UIControl : MonoBehaviour
 
     // TODO; refactor alongside HideUI, inefficient and too complex
     public void ShowCampusMenuBtnBehavior(){
-        HideUI();
         if (campusMenu.activeSelf)
         {
-            btnCmenu.image.sprite = upDown[1];
+            HideUI();
+            btnCmenu.image.sprite = upDown[0];
             // show bottom left panel
             if (TourManager.Instance.isFirstLocationSphereLoaded)
             {
@@ -53,10 +53,12 @@ public class UIControl : MonoBehaviour
         }
         else
         {
+            HideUI();
             ShowCampusMenu();
             ShowHider();
             btnCmenu.image.sprite = upDown[1];
         }
+        
     }
 
     public void FirstShowSideMenu(int campusNumber)
