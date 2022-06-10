@@ -219,7 +219,9 @@ public class TourManager : MonoBehaviour
     // for load site called by initial campus buttons
     IEnumerator StartTransition(int campusIndex)
     {
+        // Temporary fix
         UIControl.Instance.ChooseCampus(campusIndex);
+        
         // animating transition sphere
         transitionSphere.SetActive(true);
         Material material = transitionSphere.GetComponent<Renderer>().material;
