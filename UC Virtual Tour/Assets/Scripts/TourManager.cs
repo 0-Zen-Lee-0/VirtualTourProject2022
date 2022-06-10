@@ -229,7 +229,8 @@ public class TourManager : MonoBehaviour
     IEnumerator StartTransition(int campusIndex)
     {
         // Temporary fix
-        UIControl.Instance.ChooseCampus(campusIndex);
+        UIControl.Instance.HideStartPage();
+        UIControl.Instance.HideCampusMenu();
 
         // animating transition sphere
         transitionSphere.SetActive(true);
@@ -256,8 +257,7 @@ public class TourManager : MonoBehaviour
         // show selected location
         currentLocationSphere.SetActive(true);
 
-        // show left campus selector ui
-        //UIControl.Instance.ChooseCampus(campusIndex);
+        
 
         // call event 
         onLocationSphereChanged?.Invoke(currentLocationSphere);
@@ -273,6 +273,8 @@ public class TourManager : MonoBehaviour
             yield return new WaitForSeconds(frameTime);
         }
         transitionSphere.SetActive(false);
+        // show left campus selector ui
+        UIControl.Instance.ChooseCampus(campusIndex);
     }
 
     void LoadLocationSphereData()

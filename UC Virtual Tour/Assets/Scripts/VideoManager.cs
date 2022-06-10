@@ -55,6 +55,7 @@ public class VideoManager : MonoBehaviour
     {
         UIManager.Instance.hideVideoPanel();
         UIManager.Instance.showRightButtonsPanel();
+        //UIControl.Instance.ShowLeftMenuBtnBehavior(selectedCampusData.campusIndex);
         videoPlayer.Stop();
         videoPlayer.targetTexture.Release();
         LoadSite();

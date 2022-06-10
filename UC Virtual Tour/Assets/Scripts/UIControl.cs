@@ -39,8 +39,15 @@ public class UIControl : MonoBehaviour
         Instance = this;
     }
 
-    // TODO; refactor alongside HideUI, inefficient and too complex
-    public void ShowCampusMenuBtnBehavior(){
+    public void FirstShowSideMenu(int campusNumber)
+    {
+        ShowStartPage();
+        ShowCampusMenu();
+        ShowLeftMenu(campusNumber);
+    }
+        // TODO; refactor alongside HideUI, inefficient and too complex
+    public void ShowCampusMenuBtnBehavior()
+    {
         if (campusMenu.activeSelf)
         {
             HideUI();
@@ -60,17 +67,10 @@ public class UIControl : MonoBehaviour
         }
         
     }
-
-    public void FirstShowSideMenu(int campusNumber)
+    public void HideUI()
     {
-        startPage.SetActive(true);
-        ShowCampusMenu();
-        ShowLeftMenu(campusNumber);
-    }
-
-    public void HideUI(){
-        if(LeftMenus[cNo].activeSelf){
-
+        if(LeftMenus[cNo].activeSelf)
+        {
             HideLeftMenu();
             HideSpecial();
             ReturnToWhite();
@@ -80,7 +80,8 @@ public class UIControl : MonoBehaviour
 
             UIManager.Instance.showBottomLeftPanel();
         }
-        if(campusMenu.activeSelf){
+        if(campusMenu.activeSelf)
+        {
             HideCampusMenu();
             btnCmenu.image.sprite = upDown[0];
         }
@@ -88,39 +89,45 @@ public class UIControl : MonoBehaviour
         HideHider();
     }
 
-    public void BackToHome(){
-        TourManager.Instance.LoadInitialSite();
-
-        startPage.SetActive(true);
-        foreach (GameObject leftMenu in LeftMenus)
-        {
-           leftMenu.SetActive(false);
-        }
-
-        HideHider();
-        UIManager.Instance.DisableDescriptionPanel();
-        UIManager.Instance.showBottomLeftPanel();
-    }
-
-    public void ChooseCampus(int campusNumber){
+    public void ChooseCampus(int campusNumber)
+    {
         cNo = campusNumber;
         btnCmenu.image.sprite = upDown[0];
-        startPage.SetActive(false);
+        HideStartPage();
         HideLeftMenuBtns();
         ShowLeftMenuBtn(campusNumber);
         HideCampusMenu();
         HideHider();
         ShowLeftMenuBtnBehavior(campusNumber);
     }
+    public void BackToHome(){
+        TourManager.Instance.LoadInitialSite();
 
-    public void ShowCampusMenu(){
+        ShowStartPage();
+        HideLeftMenu();
+        HideHider();
+        UIManager.Instance.DisableDescriptionPanel();
+        UIManager.Instance.showBottomLeftPanel();
+    }
+
+    public void HideStartPage(){
+        startPage.SetActive(false);
+    }
+    public void ShowStartPage(){
+        startPage.SetActive(true);
+    }
+
+    public void ShowCampusMenu()
+    {
         campusMenu.SetActive(true);
     }
-    public void HideCampusMenu(){
+    public void HideCampusMenu()
+    {
         campusMenu.SetActive(false);
     }
 
-    public void ShowLeftMenuBtnBehavior(int campusNumber){
+    public void ShowLeftMenuBtnBehavior(int campusNumber)
+    {
         HideUI();
         UIManager.Instance.hideBottomLeftPanel();
         HideLeftMenuBtns();
@@ -128,27 +135,32 @@ public class UIControl : MonoBehaviour
         ShowHider();
     }
     
-    public void ShowLeftMenuBtn(int campusNumber){
+    public void ShowLeftMenuBtn(int campusNumber)
+    {
         ShowLeftMenuBtns[campusNumber].SetActive(true);
     }
-    public void HideLeftMenuBtns(){
+    public void HideLeftMenuBtns()
+    {
         for(int i = 0; i < ShowLeftMenuBtns.Length; i++)
         {
             ShowLeftMenuBtns[i].SetActive(false);
         }
     }
 
-    public void ShowLeftMenu(int campusNumber){
+    public void ShowLeftMenu(int campusNumber)
+    {
         LeftMenus[campusNumber].SetActive(true);
     }
-    public void HideLeftMenu(){
+    public void HideLeftMenu()
+    {
         foreach(GameObject leftMenu in LeftMenus)
         {
             leftMenu.SetActive(false);
         }
     }
     
-    public void MainCampusBldgBtnBehavior(int building){
+    public void MainCampusBldgBtnBehavior(int building)
+    {
         if(!buildingFloorGroup[building].activeSelf)
         {
             HideBuildingFloorGroups();
@@ -159,17 +171,20 @@ public class UIControl : MonoBehaviour
         RemainSelectedColor(building);
     }
 
-    public void ShowFloorButtons(int building){
+    public void ShowFloorButtons(int building)
+    {
             buildingFloorGroup[building].SetActive(true);
     }
-    public void HideBuildingFloorGroups(){
+    public void HideBuildingFloorGroups()
+    {
         foreach(GameObject buildingFloorGroup in buildingFloorGroup)
         {
             buildingFloorGroup.SetActive(false);
         }
     }
 
-    public void RemainSelectedColor(int building){
+    public void RemainSelectedColor(int building)
+    {
         if(building<15 || building>52)
         {
             ReturnToWhite();
@@ -190,7 +205,8 @@ public class UIControl : MonoBehaviour
         leftPanelButton[building].colors = colors;
         ShowHider();
     }
-    public void ReturnToWhite(){
+    public void ReturnToWhite()
+    {
         foreach(Button leftPanelButton in leftPanelButton)
         {
             ColorBlock colors = leftPanelButton.colors;
@@ -198,7 +214,8 @@ public class UIControl : MonoBehaviour
             leftPanelButton.colors = colors;
         }
     }
-    public void ReturnToWhite(int limitLow, int limitHi){
+    public void ReturnToWhite(int limitLow, int limitHi)
+    {
         for(int i= limitLow; i<=limitHi; i++)
         {
             ColorBlock colors = leftPanelButton[i].colors;
@@ -207,21 +224,25 @@ public class UIControl : MonoBehaviour
         }
     }
 
-    public void ShowSpecial(int floor){
+    public void ShowSpecial(int floor)
+    {
         HideSpecial();
         specialSite[floor].SetActive(true); 
     }
-    public void HideSpecial(){
+    public void HideSpecial()
+    {
         foreach(GameObject specialSite in specialSite)
         {
             specialSite.SetActive(false);
         }
     }
 
-    public void ShowHider(){
+    public void ShowHider()
+    {
         hider.SetActive(true);
     }
-    public void HideHider(){
+    public void HideHider()
+    {
         hider.SetActive(false);
     }
 }

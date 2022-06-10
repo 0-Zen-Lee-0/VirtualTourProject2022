@@ -62,7 +62,6 @@ public class UIManager : MonoBehaviour
     {
         bottomLeftPanel.SetActive(true);
     }
-
     public void hideBottomLeftPanel()
     {
         bottomLeftPanel.SetActive(false);
