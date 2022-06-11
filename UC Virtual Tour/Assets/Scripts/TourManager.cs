@@ -273,8 +273,8 @@ public class TourManager : MonoBehaviour
             yield return new WaitForSeconds(frameTime);
         }
         transitionSphere.SetActive(false);
-        // show left campus selector ui
-        UIControl.Instance.ChooseCampus(campusIndex);
+        // show left quick locate ui
+        ChooseCampus(campusIndex);
     }
 
     void LoadLocationSphereData()
