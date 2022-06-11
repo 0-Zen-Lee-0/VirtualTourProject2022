@@ -87,6 +87,7 @@ public class UIManager : MonoBehaviour
     {
         descriptionPanel.SetActive(false);
         slideshowPanel.SetActive(true);
+        UIControl.Instance.HideUI();
     }
 
     public void HideSlideshowPanel()
