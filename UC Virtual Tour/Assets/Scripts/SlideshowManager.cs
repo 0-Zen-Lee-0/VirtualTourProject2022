@@ -48,7 +48,6 @@ public class SlideshowManager : MonoBehaviour
         // should be safe assuming this function can only be called when the slideshow button is active
         slideshowImage.sprite = locationSphereSlideshowImages[0];
 
-        Debug.Log("Location Sphere");
         currentImageIndex = 0;
         slideshowImages = locationSphereSlideshowImages;
         UIManager.Instance.ShowSlideshowPanel();
@@ -58,7 +57,7 @@ public class SlideshowManager : MonoBehaviour
     {
         // there should at least be three credit sprites, so no need to put a condition for when there is no credit sprites
         slideshowImage.sprite = creditSlideshowImages[0];
-        Debug.Log("Credit");
+
         currentImageIndex = 0;
         slideshowImages = creditSlideshowImages;
         UIManager.Instance.ShowSlideshowPanel();
