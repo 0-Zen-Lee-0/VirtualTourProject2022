@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// class for managing the ui of additional systems
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance {get; private set;}

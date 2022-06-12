@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// class for managing the ui of navigation buttons
 public class UIControl : MonoBehaviour
 {
     public static UIControl Instance {get; private set;}
@@ -20,6 +21,8 @@ public class UIControl : MonoBehaviour
     public Button[] leftPanelButton;
     public GameObject[] buildingFloorGroup;
     public GameObject[] specialSite;
+
+    [SerializeField] Button creditsButton;
 
     //hider
     public GameObject hider;
@@ -71,6 +74,7 @@ public class UIControl : MonoBehaviour
     {
         if(LeftMenus[cNo].activeSelf)
         {
+            HideCreditsButton();
             HideLeftMenu();
             HideSpecial();
             ReturnToWhite();
@@ -132,7 +136,18 @@ public class UIControl : MonoBehaviour
         UIManager.Instance.hideBottomLeftPanel();
         HideLeftMenuBtns();
         ShowLeftMenu(campusNumber);
+        ShowCreditsButton();
         ShowHider();
+    }
+    
+    void ShowCreditsButton()
+    {
+        creditsButton.gameObject.SetActive(true);
+    }
+
+    void HideCreditsButton()
+    {
+        creditsButton.gameObject.SetActive(false);
     }
     
     public void ShowLeftMenuBtn(int campusNumber)

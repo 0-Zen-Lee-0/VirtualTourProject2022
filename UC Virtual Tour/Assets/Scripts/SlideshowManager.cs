@@ -8,29 +8,34 @@ public class SlideshowManager : MonoBehaviour
 {
     [SerializeField] Image slideshowImage;
     [SerializeField] Button slideshowButton;
+    [SerializeField] Button creditsButton;  
 
+    // holds the reference of the current working slideshow sprites
     Sprite[] slideshowImages;
+    // sprites for the current location sphere
+    Sprite[] locationSphereSlideshowImages;
+    // sprites for the credits
+    [SerializeField] Sprite[] creditSlideshowImages;
+
     int currentImageIndex = 0;
     float slideshowFadeDuration = 0.8f;
 
     void Awake()
     {
-        TourManager.onLocationSphereChanged += UpdateSlideshowSystem;
+        TourManager.onLocationSphereChanged += InitializeLocationSphereSlideshowSystem;
     }
 
-    void UpdateSlideshowSystem(GameObject currentLocationSphere)
-    {
-        currentImageIndex = 0;
-
+    void InitializeLocationSphereSlideshowSystem(GameObject currentLocationSphere)
+    { 
         // gets the slideshow images from locationSphereData
-        slideshowImages = currentLocationSphere.GetComponent<LocationSphereData>().slideshowImages;
+        locationSphereSlideshowImages = currentLocationSphere.GetComponent<LocationSphereData>().slideshowImages;
 
         // the button only shows up when there is at least one image located
-        if (slideshowImages.Length > 0)
+        if (locationSphereSlideshowImages.Length > 0)
         {
             slideshowButton.gameObject.SetActive(true);
 
-            slideshowImage.sprite = slideshowImages[currentImageIndex];
+            slideshowImage.sprite = locationSphereSlideshowImages[currentImageIndex];
         }        
         else
         {
@@ -38,26 +43,40 @@ public class SlideshowManager : MonoBehaviour
         }
     }
 
+    public void ShowLocationSphereSlideshowSystem()
+    {
+        currentImageIndex = 0;
+        slideshowImages = locationSphereSlideshowImages;
+        UIManager.Instance.ShowSlideshowPanel();
+    }
+
+    public void ShowCreditSlideshowSystem()
+    {
+        currentImageIndex = 0;
+        slideshowImages = creditSlideshowImages;
+        UIManager.Instance.ShowSlideshowPanel();
+    }
+
     public void SelectNextImage()
     {
-            currentImageIndex++;
-            // wraps around to the first array index
-            if (currentImageIndex >= slideshowImages.Length)
-            {
-                currentImageIndex = 0;
-            }
-            UpdateSlideshowImage();
+        currentImageIndex++;
+        // wraps around to the first array index
+        if (currentImageIndex >= slideshowImages.Length)
+        {
+            currentImageIndex = 0;
+        }
+        UpdateSlideshowImage();
     }
 
     public void SelectPreviousImage()
     {
         currentImageIndex--;
-            // wraps around to the last array index
-            if (currentImageIndex < 0)
-            {
-                currentImageIndex = slideshowImages.Length - 1;
-            }
-            UpdateSlideshowImage();
+        // wraps around to the last array index
+        if (currentImageIndex < 0)
+        {
+            currentImageIndex = slideshowImages.Length - 1;
+        }
+        UpdateSlideshowImage();
     }
 
     // transitions to the next selected slideshow image
