@@ -17,6 +17,7 @@ public class SlideshowManager : MonoBehaviour
     // sprites for the credits
     [SerializeField] Sprite[] creditSlideshowImages;
 
+    // just use one index for both location sphere and credits, adding another variable that holds a reference of the current index field that should be used is possible, however
     int currentImageIndex = 0;
     float slideshowFadeDuration = 0.8f;
 
@@ -34,8 +35,6 @@ public class SlideshowManager : MonoBehaviour
         if (locationSphereSlideshowImages.Length > 0)
         {
             slideshowButton.gameObject.SetActive(true);
-
-            slideshowImage.sprite = locationSphereSlideshowImages[currentImageIndex];
         }        
         else
         {
@@ -45,6 +44,11 @@ public class SlideshowManager : MonoBehaviour
 
     public void ShowLocationSphereSlideshowSystem()
     {
+        // this should only be called when there is at least one sprite slideshow image in the current location sphere
+        // should be safe assuming this function can only be called when the slideshow button is active
+        slideshowImage.sprite = locationSphereSlideshowImages[0];
+
+        Debug.Log("Location Sphere");
         currentImageIndex = 0;
         slideshowImages = locationSphereSlideshowImages;
         UIManager.Instance.ShowSlideshowPanel();
@@ -52,6 +56,9 @@ public class SlideshowManager : MonoBehaviour
 
     public void ShowCreditSlideshowSystem()
     {
+        // there should at least be three credit sprites, so no need to put a condition for when there is no credit sprites
+        slideshowImage.sprite = creditSlideshowImages[0];
+        Debug.Log("Credit");
         currentImageIndex = 0;
         slideshowImages = creditSlideshowImages;
         UIManager.Instance.ShowSlideshowPanel();
