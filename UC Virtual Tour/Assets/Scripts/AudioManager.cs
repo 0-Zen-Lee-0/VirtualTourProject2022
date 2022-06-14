@@ -37,14 +37,16 @@ public class AudioManager : MonoBehaviour
         // TODO: refactor, find a shorthand for this
         if (currentLocationSphere.GetComponent<LocationSphereData>().audioNarration != null)
         {
-            UIManager.Instance.ShowAudioButton();
+            //UIManager.Instance.ShowAudioButton();
+            UIManager.Instance.EnableAudioButton();
 
             clip = currentLocationSphere.GetComponent<LocationSphereData>().audioNarration;
             source.PlayOneShot(clip);
         }
         else
         {
-            UIManager.Instance.HideAudioButton();
+            //UIManager.Instance.HideAudioButton();
+            UIManager.Instance.DisableAudioButton();
         }
     }
 

@@ -22,7 +22,8 @@ public class DescriptionManager : MonoBehaviour
             // show description panel
             UIManager.Instance.showDescriptionPanel();
 
-            descriptionButton.gameObject.SetActive(true);
+            //descriptionButton.gameObject.SetActive(true);
+            descriptionButton.interactable = true;
 
             string locationName = currentLocationSphere.GetComponent<LocationSphereData>().locationName;
             string locationDescription = currentLocationSphere.GetComponent<LocationSphereData>().locationDescription;
@@ -32,7 +33,8 @@ public class DescriptionManager : MonoBehaviour
         {
             // disables the description panel when moving to a location sphere without a description
             UIManager.Instance.DisableDescriptionPanel();
-            descriptionButton.gameObject.SetActive(false);
+            //descriptionButton.gameObject.SetActive(false);
+            descriptionButton.interactable = false;
         }
     }
 }
