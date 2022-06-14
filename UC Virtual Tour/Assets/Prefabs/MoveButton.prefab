@@ -146,7 +146,7 @@ MonoBehaviour:
   dot: {fileID: 7613273216739934746}
   originalSprite: {fileID: 21300000, guid: 3023d33fc04f3854eb080c092ae83432, type: 3}
   leftSprite: {fileID: 21300000, guid: bd4f1d9e4daf61b49b958c1a1d8592dc, type: 3}
-  rightSprite: {fileID: 21300000, guid: 48c7d7c99d57d4f4e89481462a2b8ed8, type: 3}
+  rightSprite: {fileID: 21300000, guid: 933d3c6e78939a94c8c01ac0dd74d292, type: 3}
   upSprite: {fileID: 21300000, guid: 12ee8ccac648d344a81e92e5e07e9039, type: 3}
   downSprite: {fileID: 21300000, guid: 809685c9aef3ca247a8a8cffaf5b2dee, type: 3}
 --- !u!1001 &115335256255566000
