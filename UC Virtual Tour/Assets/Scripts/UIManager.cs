@@ -104,6 +104,16 @@ public class UIManager : MonoBehaviour
         setAudioButtonSprite();
     }
 
+    public void EnableAudioButton()
+    {
+        audioButton.interactable = true;
+    }
+
+    public void DisableAudioButton()
+    {
+        audioButton.interactable = false;
+    }
+
     public void ShowAudioButton()
     {
         audioButton.gameObject.SetActive(true);
