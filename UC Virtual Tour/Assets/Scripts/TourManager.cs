@@ -211,6 +211,9 @@ public class TourManager : MonoBehaviour
         // show selected location
         currentLocationSphere.SetActive(true);
 
+        // resets the last move button look rotation value
+        startingLookRotation = Vector3.zero;
+
         // call event 
         onLocationSphereChanged?.Invoke(currentLocationSphere);
 
