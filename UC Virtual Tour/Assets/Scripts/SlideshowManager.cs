@@ -34,11 +34,14 @@ public class SlideshowManager : MonoBehaviour
         // the button only shows up when there is at least one image located
         if (locationSphereSlideshowImages.Length > 0)
         {
-            slideshowButton.gameObject.SetActive(true);
+            //slideshowButton.gameObject.SetActive(true);
+            slideshowButton.interactable = true;
+            
         }        
         else
         {
-            slideshowButton.gameObject.SetActive(false);
+            //slideshowButton.gameObject.SetActive(false);
+            slideshowButton.interactable = false;
         }
     }
 
