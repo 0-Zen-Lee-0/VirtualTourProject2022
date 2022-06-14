@@ -4086,7 +4086,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   campusName: Main
   campusIndex: 0
-  introductoryClip: {fileID: 32900000, guid: f2baeb941801b18409c048fa37774368, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/MainCampus_Smallerhmph.mp4
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 9
@@ -8885,7 +8884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   campusName: Legarda
   campusIndex: 0
-  introductoryClip: {fileID: 32900000, guid: 82ad776da2bcf4f4c9d46993b27591ab, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Legarda.mp4
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 43
@@ -17662,6 +17660,10 @@ PrefabInstance:
       propertyPath: locationIndex
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 8913624110105184078, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
+      propertyPath: lookRotation.y
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1806c48a48fc5e4290a0cc74d293558, type: 3}
 --- !u!1001 &513117628
@@ -22610,7 +22612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732299169326051142, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1236618832711356051, guid: 9a8f3a172bca3e643a46ba53201fe5c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -30370,7 +30372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   campusName: Libertad
   campusIndex: 0
-  introductoryClip: {fileID: 32900000, guid: f3756521804d7bb43b755f688a91e3fa, type: 3}
   introductoryClipURL: https://acid-free.github.io/virtual-tour-videos/Campo Libertad.mp4
   IsIntroductoryClipPlayed: 0
   locationSphereIndex: 51
@@ -66188,8 +66189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 87.795, y: 39}
-  m_SizeDelta: {x: 101, y: 45}
+  m_AnchoredPosition: {x: 88, y: 26.400024}
+  m_SizeDelta: {x: 176, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765452553
 MonoBehaviour:
@@ -66220,8 +66221,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278202881
+  m_fontColor: {r: 0.003921569, g: 0.19607843, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -66238,15 +66239,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 4
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -66340,7 +66341,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1765452553}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

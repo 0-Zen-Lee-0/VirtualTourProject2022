@@ -66,7 +66,6 @@ public class UIControl : MonoBehaviour
             HideUI();
             ShowCampusMenu();
             ShowHider();
-            btnCmenu.image.sprite = upDown[1];
         }
         
     }
@@ -87,7 +86,7 @@ public class UIControl : MonoBehaviour
         if(campusMenu.activeSelf)
         {
             HideCampusMenu();
-            btnCmenu.image.sprite = upDown[0];
+            
         }
 
         HideHider();
@@ -96,7 +95,6 @@ public class UIControl : MonoBehaviour
     public void ChooseCampus(int campusNumber)
     {
         cNo = campusNumber;
-        btnCmenu.image.sprite = upDown[0];
         HideStartPage();
         HideLeftMenuBtns();
         ShowLeftMenuBtn(campusNumber);
@@ -126,10 +124,12 @@ public class UIControl : MonoBehaviour
     public void ShowCampusMenu()
     {
         campusMenu.SetActive(true);
+        btnCmenu.image.sprite = upDown[1];
     }
     public void HideCampusMenu()
     {
         campusMenu.SetActive(false);
+        btnCmenu.image.sprite = upDown[0];
     }
 
     public void ShowLeftMenuBtnBehavior(int campusNumber)
