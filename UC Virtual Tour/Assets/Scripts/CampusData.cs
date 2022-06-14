@@ -8,7 +8,7 @@ public class CampusData : MonoBehaviour
     public string campusName;
     [HideInInspector] public int campusIndex;
 
-    public VideoClip introductoryClip;
+    //public VideoClip introductoryClip;
     public string introductoryClipURL;
     [HideInInspector] public bool IsIntroductoryClipPlayed;
     public int locationSphereIndex;
