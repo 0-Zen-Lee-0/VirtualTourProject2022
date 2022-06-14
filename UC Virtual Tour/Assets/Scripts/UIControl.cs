@@ -103,6 +103,7 @@ public class UIControl : MonoBehaviour
         HideCampusMenu();
         HideHider();
         ShowLeftMenuBtnBehavior(campusNumber);
+        UIManager.Instance.showRightButtonsPanel();
     }
     public void BackToHome(){
         TourManager.Instance.LoadInitialSite();
@@ -111,6 +112,7 @@ public class UIControl : MonoBehaviour
         HideLeftMenu();
         HideHider();
         UIManager.Instance.DisableDescriptionPanel();
+        UIManager.Instance.hideRightButtonsPanel();
         UIManager.Instance.showBottomLeftPanel();
     }
 
