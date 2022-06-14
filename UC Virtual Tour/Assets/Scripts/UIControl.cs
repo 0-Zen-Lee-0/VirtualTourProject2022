@@ -109,6 +109,7 @@ public class UIControl : MonoBehaviour
         ShowStartPage();
         HideLeftMenu();
         HideHider();
+        HideCreditsButton();
         UIManager.Instance.DisableDescriptionPanel();
         UIManager.Instance.hideRightButtonsPanel();
         UIManager.Instance.showBottomLeftPanel();
