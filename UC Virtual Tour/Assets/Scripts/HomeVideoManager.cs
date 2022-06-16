@@ -9,6 +9,7 @@ public class HomeVideoManager : MonoBehaviour
 
     VideoPlayer videoPlayer;
     [SerializeField] string homeClipURL;
+    [SerializeField] GameObject homeImage;
 
     void Awake()
     {
@@ -25,6 +26,12 @@ public class HomeVideoManager : MonoBehaviour
     {
         videoPlayer = GetComponent<VideoPlayer>();
         PlayHomeClip();
+        videoPlayer.prepareCompleted += HideHomeImage;
+    }
+
+    void HideHomeImage(VideoPlayer videoPlayer)
+    {
+        homeImage.SetActive(false);
     }
 
     public void PlayHomeClip()
