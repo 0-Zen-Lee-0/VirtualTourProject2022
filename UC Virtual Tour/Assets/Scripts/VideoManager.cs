@@ -24,6 +24,9 @@ public class VideoManager : MonoBehaviour
         {
             try
             {
+                // stops the home video
+                HomeVideoManager.Instance.StopHomeClip();
+
                 TourManager.Instance.LoadInitialSite();
 
                 campusData.IsIntroductoryClipPlayed = true;

@@ -104,6 +104,9 @@ public class UIControl : MonoBehaviour
         UIManager.Instance.showRightButtonsPanel();
     }
     public void BackToHome(){
+        // start home drone video
+        HomeVideoManager.Instance.PlayHomeClip();
+
         TourManager.Instance.LoadInitialSite();
 
         ShowStartPage();
