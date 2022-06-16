@@ -24,6 +24,8 @@ public class VideoManager : MonoBehaviour
         {
             try
             {
+                TourManager.Instance.LoadInitialSite();
+
                 campusData.IsIntroductoryClipPlayed = true;
                 videoPlayer.url = campusData.introductoryClipURL;
 
