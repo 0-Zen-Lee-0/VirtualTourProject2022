@@ -11,6 +11,8 @@ public class HomeVideoManager : MonoBehaviour
     [SerializeField] string homeClipURL;
     [SerializeField] GameObject homeImage;
 
+    bool isHomeImageHidden;
+
     void Awake()
     {
         if (Instance != null)
@@ -26,16 +28,33 @@ public class HomeVideoManager : MonoBehaviour
     {
         videoPlayer = GetComponent<VideoPlayer>();
         PlayHomeClip();
-        videoPlayer.prepareCompleted += HideHomeImage;
     }
 
-    void HideHomeImage(VideoPlayer videoPlayer)
+    void Update()
+    {
+        if (videoPlayer.time > 0 && !isHomeImageHidden)
+        {
+            HideHomeImage();
+            isHomeImageHidden = true;
+        }
+    }
+
+    void HideHomeImage()
     {
         homeImage.SetActive(false);
     }
 
+    void ShowHomeImage()
+    {
+        homeImage.SetActive(true);
+    }
+
     public void PlayHomeClip()
     {
+        // reset bool flag
+        isHomeImageHidden = false;
+        ShowHomeImage();
+
         videoPlayer.url = homeClipURL;
         videoPlayer.Play();
     }
