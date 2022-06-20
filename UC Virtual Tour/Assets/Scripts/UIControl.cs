@@ -42,6 +42,7 @@ public class UIControl : MonoBehaviour
         Instance = this;
     }
 
+    
     public void FirstShowSideMenu(int campusNumber)
     {
         ShowStartPage();
@@ -69,8 +70,10 @@ public class UIControl : MonoBehaviour
         }
         
     }
+    
     public void HideUI()
     {
+        //Hides Left Panel and resets contents to default
         if(LeftMenus[cNo].activeSelf)
         {
             HideCreditsButton();
@@ -83,6 +86,7 @@ public class UIControl : MonoBehaviour
 
             UIManager.Instance.showBottomLeftPanel();
         }
+        //Hides bottom panel (campus menu)
         if(campusMenu.activeSelf)
         {
             HideCampusMenu();
@@ -92,6 +96,7 @@ public class UIControl : MonoBehaviour
         HideHider();
     }
 
+    //Shows UI for chosen campus
     public void ChooseCampus(int campusNumber)
     {
         cNo = campusNumber;
@@ -103,6 +108,8 @@ public class UIControl : MonoBehaviour
         ShowLeftMenuBtnBehavior(campusNumber);
         UIManager.Instance.showRightButtonsPanel();
     }
+
+    //Returns user back to home page (start page)
     public void BackToHome(){
         // start home drone video
         HomeVideoManager.Instance.PlayHomeClip();
@@ -136,6 +143,7 @@ public class UIControl : MonoBehaviour
         btnCmenu.image.sprite = upDown[0];
     }
 
+    //Show Left Menu and its contents
     public void ShowLeftMenuBtnBehavior(int campusNumber)
     {
         HideUI();
@@ -180,6 +188,7 @@ public class UIControl : MonoBehaviour
         }
     }
     
+    //Shows special sites and floors of building when building button is clicked
     public void MainCampusBldgBtnBehavior(int building)
     {
         if(!buildingFloorGroup[building].activeSelf)
@@ -204,6 +213,7 @@ public class UIControl : MonoBehaviour
         }
     }
 
+    //Buttons remain selected when user clicks on either building floors or special sites
     public void RemainSelectedColor(int building)
     {
         if(building<15 || building>52)
@@ -226,6 +236,7 @@ public class UIControl : MonoBehaviour
         leftPanelButton[building].colors = colors;
         ShowHider();
     }
+    //Resets button color (deselect)
     public void ReturnToWhite()
     {
         foreach(Button leftPanelButton in leftPanelButton)
