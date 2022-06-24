@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// Class used by move button to change sprites when hovered
 public class HoverChangeSprite : MonoBehaviour
 {
+    // Duration of the current hover
     float activeHoverTime;
-    // implemented to avoid calling SwitchHover every frame
+    // Used to avoid calling SwitchHover every frame
     bool isHoverActive;
     [SerializeField] float hoverTime;
     [SerializeField] HoverMove hoverMove;
@@ -32,7 +32,7 @@ public class HoverChangeSprite : MonoBehaviour
         }
     }
 
-    // switch hover sprite
+    // Function used to switch hover sprite
     void SwitchHover()
     {
         isHoverActive = true;
@@ -56,13 +56,14 @@ public class HoverChangeSprite : MonoBehaviour
         }
     }
 
-    // return to original sprite
+    // Function used to return the move button sprite to original sprite
     void ReturnHover()
     {
         isHoverActive = false;
         dot.sprite = originalSprite;
     }
 
+    // Function for setting the active hover time when hovered
     void OnMouseOver()
     {
         activeHoverTime = hoverTime;

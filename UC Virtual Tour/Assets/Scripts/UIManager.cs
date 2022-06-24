@@ -1,16 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// class for managing the ui of additional systems
+// Class for managing the UI of various systems used by location spheres
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance {get; private set;}
 
-    //[SerializeField] GameObject leftPanel;
     [SerializeField] GameObject rightButtonsPanel;
     [SerializeField] GameObject bottomLeftPanel;
     [SerializeField] GameObject slideshowPanel;
@@ -40,13 +37,10 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        //leftPanel.SetActive(true);
-        // rightButtonsPanel.SetActive(true);
-
         setAudioButtonSprite();        
     }
 
-    // sets audio button sprite based on mute state
+    // Sets audio button sprite based on mute state
     void setAudioButtonSprite()
     {
         if (AudioManager.Instance.isAudioMuted)
@@ -63,6 +57,7 @@ public class UIManager : MonoBehaviour
     {
         bottomLeftPanel.SetActive(true);
     }
+
     public void hideBottomLeftPanel()
     {
         bottomLeftPanel.SetActive(false);
@@ -74,12 +69,12 @@ public class UIManager : MonoBehaviour
         floorNameText.text = floorName;
     }
 
-    public void showRightButtonsPanel()
+    public void ShowRightButtonsPanel()
     {
         rightButtonsPanel.SetActive(true);
     }
 
-    public void hideRightButtonsPanel()
+    public void HideRightButtonsPanel()
     {
         rightButtonsPanel.SetActive(false);
     }
@@ -98,8 +93,7 @@ public class UIManager : MonoBehaviour
 
     public void ToggleAudioButton()
     {
-        // TODO: refactor if possible
-        // reverses the mute state
+        // Reverses the mute state
         AudioManager.Instance.ToggleMute();
         setAudioButtonSprite();
     }
@@ -130,17 +124,17 @@ public class UIManager : MonoBehaviour
         descriptionPanel.SetActive(!currentState);
     }
 
-    public void showDescriptionPanel()
+    public void ShowDescriptionPanel()
     {
         descriptionPanel.SetActive(true);
     }
 
-    public void showVideoPanel()
+    public void ShowVideoPanel()
     {
         videoPanel.SetActive(true);
     }
 
-    public void hideVideoPanel()
+    public void HideVideoPanel()
     {
         videoPanel.SetActive(false);
     }

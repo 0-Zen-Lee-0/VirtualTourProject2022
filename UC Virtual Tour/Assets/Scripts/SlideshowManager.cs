@@ -1,23 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// TODO: Ponder if this should be merged with UIManager
+// Class for handling the slideshow system 
 public class SlideshowManager : MonoBehaviour
 {
     [SerializeField] Image slideshowImage;
     [SerializeField] Button slideshowButton;
     [SerializeField] Button creditsButton;  
 
-    // holds the reference of the current working slideshow sprites
+    // Holds the reference of the current working slideshow sprites
     Sprite[] slideshowImages;
-    // sprites for the current location sphere
+    // Sprites for the current location sphere
     Sprite[] locationSphereSlideshowImages;
-    // sprites for the credits
+    // Sprites for the credits
     [SerializeField] Sprite[] creditSlideshowImages;
 
-    // just use one index for both location sphere and credits, adding another variable that holds a reference of the current index field that should be used is possible, however
+    // Just use one index for both location sphere and credits, adding another variable that holds a reference to the current index field that should be used is possible, however
     int currentImageIndex = 0;
     float slideshowFadeDuration = 0.8f;
 
@@ -26,29 +24,27 @@ public class SlideshowManager : MonoBehaviour
         TourManager.onLocationSphereChanged += InitializeLocationSphereSlideshowSystem;
     }
 
+    // Called when a new location sphere is active
     void InitializeLocationSphereSlideshowSystem(GameObject currentLocationSphere)
     { 
-        // gets the slideshow images from locationSphereData
+        // Gets the slideshow images from locationSphereData
         locationSphereSlideshowImages = currentLocationSphere.GetComponent<LocationSphereData>().slideshowImages;
 
-        // the button only shows up when there is at least one image located
+        // The button only shows up when there is at least one image located
         if (locationSphereSlideshowImages.Length > 0)
         {
-            //slideshowButton.gameObject.SetActive(true);
             slideshowButton.interactable = true;
-            
         }        
         else
         {
-            //slideshowButton.gameObject.SetActive(false);
             slideshowButton.interactable = false;
         }
     }
 
+    // Function attached to the slideshow button, activates when the button is pressed
+    // This should only be called when there is at least one sprite slideshow image in the current location sphere; should be safe assuming this function can only be called when the slideshow button is active
     public void ShowLocationSphereSlideshowSystem()
     {
-        // this should only be called when there is at least one sprite slideshow image in the current location sphere
-        // should be safe assuming this function can only be called when the slideshow button is active
         slideshowImage.sprite = locationSphereSlideshowImages[0];
 
         currentImageIndex = 0;
@@ -56,9 +52,10 @@ public class SlideshowManager : MonoBehaviour
         UIManager.Instance.ShowSlideshowPanel();
     }
 
+    // Function attached to the credits button, activates when the button is pressed
+    // There should at least be three credit sprites, so no need to put a condition for when there are no credit sprites
     public void ShowCreditSlideshowSystem()
     {
-        // there should at least be three credit sprites, so no need to put a condition for when there is no credit sprites
         slideshowImage.sprite = creditSlideshowImages[0];
 
         currentImageIndex = 0;
@@ -66,10 +63,11 @@ public class SlideshowManager : MonoBehaviour
         UIManager.Instance.ShowSlideshowPanel();
     }
 
+    // Function attached to the next button
     public void SelectNextImage()
     {
         currentImageIndex++;
-        // wraps around to the first array index
+        // Wraps around to the first array index to prevent arrayIndexOutOfBounds
         if (currentImageIndex >= slideshowImages.Length)
         {
             currentImageIndex = 0;
@@ -77,10 +75,11 @@ public class SlideshowManager : MonoBehaviour
         UpdateSlideshowImage();
     }
 
+    // Function attached to the previous button
     public void SelectPreviousImage()
     {
         currentImageIndex--;
-        // wraps around to the last array index
+        // Wraps around to the last array index
         if (currentImageIndex < 0)
         {
             currentImageIndex = slideshowImages.Length - 1;
@@ -88,7 +87,7 @@ public class SlideshowManager : MonoBehaviour
         UpdateSlideshowImage();
     }
 
-    // transitions to the next selected slideshow image
+    // Transitions to the next selected slideshow image
     void UpdateSlideshowImage()
     {
         slideshowImage.canvasRenderer.SetAlpha(0f);

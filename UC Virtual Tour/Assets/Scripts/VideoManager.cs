@@ -32,8 +32,8 @@ public class VideoManager : MonoBehaviour
                 campusData.IsIntroductoryClipPlayed = true;
                 videoPlayer.url = campusData.introductoryClipURL;
 
-                UIManager.Instance.showVideoPanel();
-                UIManager.Instance.hideRightButtonsPanel();
+                UIManager.Instance.ShowVideoPanel();
+                UIManager.Instance.HideRightButtonsPanel();
                 
                 videoPlayer.Play();
             }
@@ -58,8 +58,8 @@ public class VideoManager : MonoBehaviour
 
     public void StopVideo()
     {
-        UIManager.Instance.hideVideoPanel();
-        UIManager.Instance.showRightButtonsPanel();
+        UIManager.Instance.HideVideoPanel();
+        UIManager.Instance.ShowRightButtonsPanel();
         //UIControl.Instance.ShowLeftMenuBtnBehavior(selectedCampusData.campusIndex);
         videoPlayer.Stop();
         videoPlayer.targetTexture.Release();

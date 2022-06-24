@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// class for managing the ui of navigation buttons
+// Class for managing the UI of navigation buttons
 public class UIControl : MonoBehaviour
 {
     public static UIControl Instance {get; private set;}
     
     public GameObject startPage;
     public GameObject campusMenu;
-    //up-down button
+    // up-down button
     public Button btnCmenu;
     public Sprite[] upDown;
-    //Campus
+    // Campus
     public GameObject[] ShowLeftMenuBtns;
-    //Side Menu
+    // Side Menu
     public GameObject[] LeftMenus;
     
     public Button[] leftPanelButton;
@@ -24,7 +22,7 @@ public class UIControl : MonoBehaviour
 
     [SerializeField] Button creditsButton;
 
-    //hider
+    // Hider
     public GameObject hider;
     
     public int cNo = 0;
@@ -41,7 +39,6 @@ public class UIControl : MonoBehaviour
 
         Instance = this;
     }
-
     
     public void FirstShowSideMenu(int campusNumber)
     {
@@ -49,7 +46,7 @@ public class UIControl : MonoBehaviour
         ShowCampusMenu();
         ShowLeftMenu(campusNumber);
     }
-        // TODO; refactor alongside HideUI, inefficient and too complex
+    
     public void ShowCampusMenuBtnBehavior()
     {
         if (campusMenu.activeSelf)
@@ -73,7 +70,7 @@ public class UIControl : MonoBehaviour
     
     public void HideUI()
     {
-        //Hides Left Panel and resets contents to default
+        // Hides Left Panel and resets contents to default
         if(LeftMenus[cNo].activeSelf)
         {
             HideCreditsButton();
@@ -81,12 +78,12 @@ public class UIControl : MonoBehaviour
             HideSpecial();
             ReturnToWhite();
             HideBuildingFloorGroups();
-            //Fix This
             ShowLeftMenuBtn(cNo);
 
             UIManager.Instance.showBottomLeftPanel();
         }
-        //Hides bottom panel (campus menu)
+
+        // Hides bottom panel (campus menu)
         if(campusMenu.activeSelf)
         {
             HideCampusMenu();
@@ -96,7 +93,7 @@ public class UIControl : MonoBehaviour
         HideHider();
     }
 
-    //Shows UI for chosen campus
+    // Shows UI for chosen campus
     public void ChooseCampus(int campusNumber)
     {
         cNo = campusNumber;
@@ -106,12 +103,12 @@ public class UIControl : MonoBehaviour
         HideCampusMenu();
         HideHider();
         ShowLeftMenuBtnBehavior(campusNumber);
-        UIManager.Instance.showRightButtonsPanel();
+        UIManager.Instance.ShowRightButtonsPanel();
     }
 
-    //Returns user back to home page (start page)
+    // Returns user back to home page (start page)
     public void BackToHome(){
-        // start home drone video
+        // Starts home drone video
         HomeVideoManager.Instance.PlayHomeClip();
 
         TourManager.Instance.LoadInitialSite();
@@ -121,14 +118,17 @@ public class UIControl : MonoBehaviour
         HideHider();
         HideCreditsButton();
         UIManager.Instance.DisableDescriptionPanel();
-        UIManager.Instance.hideRightButtonsPanel();
+        UIManager.Instance.HideRightButtonsPanel();
         UIManager.Instance.showBottomLeftPanel();
     }
 
-    public void HideStartPage(){
+    public void HideStartPage()
+    {
         startPage.SetActive(false);
     }
-    public void ShowStartPage(){
+
+    public void ShowStartPage()
+    {
         startPage.SetActive(true);
     }
 
@@ -137,13 +137,14 @@ public class UIControl : MonoBehaviour
         campusMenu.SetActive(true);
         btnCmenu.image.sprite = upDown[1];
     }
+    
     public void HideCampusMenu()
     {
         campusMenu.SetActive(false);
         btnCmenu.image.sprite = upDown[0];
     }
 
-    //Show Left Menu and its contents
+    // Shows Left Menu and its contents
     public void ShowLeftMenuBtnBehavior(int campusNumber)
     {
         HideUI();
@@ -168,9 +169,10 @@ public class UIControl : MonoBehaviour
     {
         ShowLeftMenuBtns[campusNumber].SetActive(true);
     }
+
     public void HideLeftMenuBtns()
     {
-        for(int i = 0; i < ShowLeftMenuBtns.Length; i++)
+        for (int i = 0; i < ShowLeftMenuBtns.Length; i++)
         {
             ShowLeftMenuBtns[i].SetActive(false);
         }
@@ -180,23 +182,25 @@ public class UIControl : MonoBehaviour
     {
         LeftMenus[campusNumber].SetActive(true);
     }
+
     public void HideLeftMenu()
     {
-        foreach(GameObject leftMenu in LeftMenus)
+        foreach (GameObject leftMenu in LeftMenus)
         {
             leftMenu.SetActive(false);
         }
     }
     
-    //Shows special sites and floors of building when building button is clicked
+    // Shows special sites and floors of building when building button is clicked
     public void MainCampusBldgBtnBehavior(int building)
     {
-        if(!buildingFloorGroup[building].activeSelf)
+        if (!buildingFloorGroup[building].activeSelf)
         {
             HideBuildingFloorGroups();
             ShowFloorButtons(building);
             ShowHider();
         }
+
         HideSpecial();
         RemainSelectedColor(building);
     }
@@ -205,21 +209,23 @@ public class UIControl : MonoBehaviour
     {
             buildingFloorGroup[building].SetActive(true);
     }
+
     public void HideBuildingFloorGroups()
     {
-        foreach(GameObject buildingFloorGroup in buildingFloorGroup)
+        foreach (GameObject buildingFloorGroup in buildingFloorGroup)
         {
             buildingFloorGroup.SetActive(false);
         }
     }
 
-    //Buttons remain selected when user clicks on either building floors or special sites
+    // Buttons remain selected when user clicks on either building floors or special sites
     public void RemainSelectedColor(int building)
     {
-        if(building<15 || building>52)
+        if (building < 15 || building > 52)
         {
             ReturnToWhite();
         }
+
         switch (building) 
         {
             case 15:
@@ -231,24 +237,27 @@ public class UIControl : MonoBehaviour
                 ReturnToWhite(15,20);
                 break;
         }
+
         ColorBlock colors = leftPanelButton[building].colors;
         colors.normalColor = new Color32(8,105,60,255);
         leftPanelButton[building].colors = colors;
         ShowHider();
     }
-    //Resets button color (deselect)
+
+    // Resets button color (deselect)
     public void ReturnToWhite()
     {
-        foreach(Button leftPanelButton in leftPanelButton)
+        foreach (Button leftPanelButton in leftPanelButton)
         {
             ColorBlock colors = leftPanelButton.colors;
             colors.normalColor = new Color32(255,255,255,255);
             leftPanelButton.colors = colors;
         }
     }
+
     public void ReturnToWhite(int limitLow, int limitHi)
     {
-        for(int i= limitLow; i<=limitHi; i++)
+        for (int i = limitLow; i <= limitHi; i++)
         {
             ColorBlock colors = leftPanelButton[i].colors;
             colors.normalColor = new Color32(255,255,255,255);
@@ -263,7 +272,7 @@ public class UIControl : MonoBehaviour
     }
     public void HideSpecial()
     {
-        foreach(GameObject specialSite in specialSite)
+        foreach (GameObject specialSite in specialSite)
         {
             specialSite.SetActive(false);
         }
@@ -273,6 +282,7 @@ public class UIControl : MonoBehaviour
     {
         hider.SetActive(true);
     }
+
     public void HideHider()
     {
         hider.SetActive(false);

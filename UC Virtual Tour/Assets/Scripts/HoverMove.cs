@@ -1,3 +1,4 @@
+// Enum used for the move button sprite types when hovered
 public enum HoverMove
 {
     None,

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Class for handling camera interaction on location spheres
 public class CameraController : MonoBehaviour
 {
     // Base speed at 60 fps
@@ -12,7 +13,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] float minFieldOfView = 40.0f;
     [SerializeField] float maxFieldOfView = 110.0f;
     // TODO: Deprecate
-    [SerializeField] float defaulFieldOfView = 90.0f;
+    [SerializeField] float defaultFieldOfView = 90.0f;
     float fieldOfView;
     float maxVerticalAngle = 90f;
 
@@ -37,7 +38,7 @@ public class CameraController : MonoBehaviour
     bool initialPanPrepared;
     bool initialPanRunning;
 
-    // needed for showing fps
+    // Used for showing fps
     float deltaTime;
     float fps;
 
@@ -61,7 +62,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    // TODO: find a more elegant solution, current implementation is too expensive
+    // When user rotates the camera to the uppermost and lowermost part of the location sphere, flickering occurs. This function prevents this problem by clamping the vertical angle.
     float ClampVerticalAngle(float angle)
     {
         float upperLimit = 360f - maxVerticalAngle;
@@ -79,6 +80,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    // Coroutine for initializing the initial pan
     IEnumerator StartInitialPan()
     {
         initialPanPrepared = true;
@@ -86,7 +88,7 @@ public class CameraController : MonoBehaviour
         initialPan = StartCoroutine(InitialPan());
     }
 
-    // TODO: refactor, inefficient
+    // When user doesn't interact with the current location sphere after a specified time, the camera will automatically pan to either left or right.
     IEnumerator InitialPan()
     {
         initialPanRunning = true;
@@ -104,16 +106,16 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    // Resets the boolean flags and coroutine used by the last location sphere
     void ResetFlags(GameObject currentLocationSphere)
     {  
-        // prevent running multiple coroutines
+        // prevents running multiple coroutines
         if (initialPanPrepared)
         {
             StopCoroutine(startInitialPan); 
         }
         if (initialPanRunning)
         {
-            // StopCoroutine(initialPan);
             initialPanRunning = false;
         }
 
@@ -124,6 +126,7 @@ public class CameraController : MonoBehaviour
 
     }
 
+    // Function for handling camera rotation and zooming based on user input
     void HandleSphereNavigation()
     {
         if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
@@ -133,17 +136,17 @@ public class CameraController : MonoBehaviour
             isCurrentSphereInteracted = true;
             isDragging = true;
         }
-
         
         if (Input.GetMouseButton(0) && isDragging)
         {
+            // fpsMultiplier is used to make camera rotation frame-independent
             float fpsMultiplier = fps / 60;
             dragVelocity = Input.mousePosition - lastMousePosition;
             lastMousePosition = Input.mousePosition;    
 
             lastPanInput = currentPanInput;
             
-            // rotate camera based on mouse actions
+            // Rotate camera based on mouse actions
             currentPanInput =  new Vector3(ClampVerticalAngle(transform.localEulerAngles.x + (dragVelocity.y * Time.deltaTime * rotateSpeed * fpsMultiplier)), transform.localEulerAngles.y + (dragVelocity.x * Time.deltaTime * -rotateSpeed * fpsMultiplier), 0);
         }
         else if (Input.GetMouseButtonUp(0))
@@ -156,7 +159,7 @@ public class CameraController : MonoBehaviour
         {
             isCurrentSphereInteracted = true;
 
-            // move camera forward/backward
+            // Move camera forward/backward (practically zooming in/out)
             fieldOfView = Mathf.Clamp(fieldOfView + Input.GetAxis("Mouse Y") * Time.deltaTime * zoomSpeed, minFieldOfView, maxFieldOfView);
             UpdateCameraFOV();
         }
@@ -167,14 +170,14 @@ public class CameraController : MonoBehaviour
             UpdateCameraFOV();
         }
         
-        // Update camera rotation
+        // Updates camera rotation
         if (isCurrentSphereInteracted)
         {
             transform.localEulerAngles = currentPanInput;
-            // transform.localEulerAngles = new Vector3(Mathf.Lerp(lastPanInput.x, currentPanInput.x, Time.deltaTime * a), Mathf.Lerp(lastPanInput.y, currentPanInput.y, Time.deltaTime * a), Mathf.Lerp(lastPanInput.z, currentPanInput.z, Time.deltaTime * a));
         }
     }
 
+    // Function for checking if the mouse cursor is pointing over a UI component. Used to prevent other functions from activating when this returns true.
     bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -184,24 +187,26 @@ public class CameraController : MonoBehaviour
         return results.Count > 0;
     }
 
+    // Resets the camera fields
     public void ResetCamera()
     {
         transform.rotation = Quaternion.identity;
-        fieldOfView = defaulFieldOfView;
+        fieldOfView = defaultFieldOfView;
         UpdateCameraFOV();
     }
 
+    // Resets the camera fields
     public void ResetCamera(Vector3 lookRotation, float fieldOfView)
     {
         lastPanInput = lookRotation;
         currentPanInput = lookRotation;
 
         transform.eulerAngles = lookRotation;
-        // TODO: refactor
         this.fieldOfView = fieldOfView;
         UpdateCameraFOV();
     }
 
+    // Updates camera field of view
     void UpdateCameraFOV()
     {
         Camera.main.fieldOfView = fieldOfView;

@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// TODO: null safety!
+// Class for handling location sphere-related activities
 public class TourManager : MonoBehaviour
 {
     public static TourManager Instance { get; private set; }
     public GameObject[] locationSpheres;
     [SerializeField] int initialLocationSphereIndex;
 
-    // event triggered when a location sphere is selected
+    // Event triggered when a location sphere is selected
     public static event Action<GameObject> onLocationSphereChanged;
 
     // Note: Inconsistent; if I make this public, there would be no point in sending a game object from the event
@@ -66,21 +66,24 @@ public class TourManager : MonoBehaviour
         }
     }
 
+    // Function for loading the initial site
     public void LoadInitialSite()
     {
         HideAllSites();
 
-        // assign the current location sphere
+        // Assigns the current location sphere
         currentLocationSphere = locationSpheres[initialLocationSphereIndex];
         
         LoadLocationSphereData();
 
-        // show selected location
+        // Shows selected location
         currentLocationSphere.SetActive(true);
-        // call event 
+
+        // Call event for telling a new location sphere is active 
         onLocationSphereChanged?.Invoke(currentLocationSphere);
     }
 
+    // Function for loading a location sphere
     // TODO: refactor, two load sites function with tons of repetitive code
     public void LoadSite(CampusData campusData)
     {
@@ -97,7 +100,7 @@ public class TourManager : MonoBehaviour
         // assign the current location sphere
         currentLocationSphere = locationSpheres[locationIndex];
 
-        SetupBottomLeftUI(currentLocationSphere.name);
+        SetupLocationSphereUIName(currentLocationSphere.name);
 
         StartCoroutine(StartTransition(campusIndex));
     }
@@ -113,12 +116,13 @@ public class TourManager : MonoBehaviour
         // assign the current location sphere
         currentLocationSphere = locationSpheres[locationIndex];
 
-        SetupBottomLeftUI(currentLocationSphere.name);
+        SetupLocationSphereUIName(currentLocationSphere.name);
 
         StartCoroutine(StartTransition());
     }
 
-    void SetupBottomLeftUI(string locationSphereName)
+    // Function for setting up the data needed by the location sphere name (upper left panel showing the building name and floor)    
+    void SetupLocationSphereUIName(string locationSphereName)
     {
         string[] nameSubstring = locationSphereName.Split("_");
         string buildingName;
@@ -278,10 +282,11 @@ public class TourManager : MonoBehaviour
             yield return new WaitForSeconds(frameTime);
         }
         transitionSphere.SetActive(false);
-        // show left quick locate ui
+        // Shows left quick locate ui
         ChooseCampus(campusIndex);
     }
 
+    // Function for checking if the mouse cursor is pointing over a UI component. Used to prevent other functions from activating when this returns true.
     bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -291,6 +296,7 @@ public class TourManager : MonoBehaviour
         return results.Count > 0;
     }
 
+    // Assigns the location sphere data to camera
     void LoadLocationSphereData()
     {
         if (startingLookRotation == Vector3.zero)
@@ -302,7 +308,7 @@ public class TourManager : MonoBehaviour
         Camera.main.GetComponent<CameraController>().ResetCamera(startingLookRotation, defaultFieldOfView);
     }
 
-    // TODO: deprecate? If so, replace int indexes with gameobject references
+    // Function used to hide all active sites
     void HideAllSites()
     {
         foreach (GameObject locationSphere in locationSpheres)
@@ -311,6 +317,7 @@ public class TourManager : MonoBehaviour
         }
     }
 
+    // Functin to call ChooseCampus from UIControl
     public void ChooseCampus(int campusIndex)
     {
         UIControl.Instance.ChooseCampus(campusIndex);

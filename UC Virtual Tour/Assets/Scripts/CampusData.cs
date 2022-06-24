@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
 
+// Class for storing campus data
 public class CampusData : MonoBehaviour
 {
     public string campusName;
     [HideInInspector] public int campusIndex;
 
-    //public VideoClip introductoryClip;
+    // URL for the introductory clip that is played when selecting a campus for the first time
     public string introductoryClipURL;
     [HideInInspector] public bool IsIntroductoryClipPlayed;
+    // the index (Based on TourManager locationSpheres array) of the location sphere that will load when selecting the campus
     public int locationSphereIndex;
 
     void Start()

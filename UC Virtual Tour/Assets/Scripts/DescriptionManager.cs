@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class for handling the description for every location sphere
 public class DescriptionManager : MonoBehaviour
 {
     [SerializeField] Button descriptionButton;
@@ -12,17 +11,15 @@ public class DescriptionManager : MonoBehaviour
         TourManager.onLocationSphereChanged += InitializeDescriptionSystem;
     }
 
+    // Called when a new location sphere is selected
     void InitializeDescriptionSystem(GameObject currentLocationSphere)
     {
-
-
-        // makes sure that the entry was filled out, if not, the overlay button will not be shown
+        // Ensure that the entry was filled out, if not, the overlay button will not be shown
         if (currentLocationSphere.GetComponent<LocationSphereData>().locationDescription.Length > 0)
         {
-            // show description panel
-            UIManager.Instance.showDescriptionPanel();
+            // Shows description panel
+            UIManager.Instance.ShowDescriptionPanel();
 
-            //descriptionButton.gameObject.SetActive(true);
             descriptionButton.interactable = true;
 
             string locationName = currentLocationSphere.GetComponent<LocationSphereData>().locationName;
@@ -31,9 +28,8 @@ public class DescriptionManager : MonoBehaviour
         }
         else
         {
-            // disables the description panel when moving to a location sphere without a description
+            // Disables the description panel when moving to a location sphere without a description
             UIManager.Instance.DisableDescriptionPanel();
-            //descriptionButton.gameObject.SetActive(false);
             descriptionButton.interactable = false;
         }
     }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-// class for rotating buttons to face at the origin
+// Class for rotating buttons to face at the origin
 public class RotateTowardsOrigin : MonoBehaviour
 {
     [SerializeField] bool rotateOrigin;

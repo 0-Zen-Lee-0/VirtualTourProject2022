@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
+// Class for handling the video playback at the home page
+// Very similar to VideoManager.cs; had to duplicate due to time constraints, VideoManager wasn't scalable enough at the time
 public class HomeVideoManager : MonoBehaviour
 {
     public static HomeVideoManager Instance { get; private set; }
 
     VideoPlayer videoPlayer;
+    // URL for the introductory clip
     [SerializeField] string homeClipURL;
+    // Static image when the home clip isn't available yet
     [SerializeField] GameObject homeImage;
 
     bool isHomeImageHidden;
@@ -51,7 +53,7 @@ public class HomeVideoManager : MonoBehaviour
 
     public void PlayHomeClip()
     {
-        // reset bool flag
+        // Resets bool flag
         isHomeImageHidden = false;
         ShowHomeImage();
 
